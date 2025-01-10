@@ -1,0 +1,237 @@
+Stack 
+
+    This is just a one dimensional array, in which there disimilarities lies on how they're built; they're different in a way that 
+    there memory alocations are not one of the same. Array's have a limited memory, while in statcks the system provides it indefi
+    nitely. 
+    And so, this project will copy the stack of Java, and turn them into functions. From stack creation to it's mechanics, althoug
+    h not every mechanics there is. This is just to have a deeper understanding through arrays.
+    This also will make a header file for future use of the stack data structure.
+
+-----------------------------------------------------------------------------------------------
+Main Program: This is where we initialize and manipulate the stack
+1. initialize a void function with parameter as a int pointer, and a struct.
+1.1. Nickname that struct to stack, and initialize an array with related datatype within the struct.
+2. initialize a struct named stack.related_data_type.
+3. Inside the function, initialize a for loop in which it assigns a value to each individual elements of that initialized struct
+array to zero.
+4. Inside the function, a conditional statement in which it checks what function is an argument.
+4.1. If push, initialize a while loop with a condition that checks if there is an assignment of value to one element
+in that array. If the assignment is successful, break the while loop.
+4.2. If pop, initialize a while loop with a condition that checks an array's value from end up to the start, and scans if that
+array has an element with an assigned value; and then return that value.
+4.2.1. If the element has an unsigned value, assign zero to that element, and return 0;
+4.3 If clear, have an if statement that scans if the second index of that array is 3. 
+4.3.1 If true, assign all the values of the stack to zero
+4.4 If capacity, have a condition statement that checks if it is 4. 
+4.4.1 If 4, check the capacity of the stack
+4.5 If add, have a conditional statement that checks if the value is 5
+4.5.1 If 5, assign a value with its parameters of value, and in a specified index location provided also by the function.
+4.6. If remove, initialize a conditional statement that checks for the value of 6
+4.6.1 If true, check for the specified index in the stack and assign a value of zero 
+4.7. If peak, initialize a conditional statement that checks for the value of 7
+4.7.1 If true, check the value of the further index with a value and print a statement with its value
+4.8. If search, initalize a conditional statement that checks for the value of 8
+4.8.1 If true, with its first element in the outside function's array, search for that value within index of the stack
+4.8.2. If found, print it's index location; if not, print null
+
+Push: This inputs values to the stack/array - 1
+1. Initialize a relative data type function with parameter as long long integer.
+2. Inside that function, initialize a an array using the pointer method with malloc with it's relative data type.
+3. Assign a value to the first element of that array with the value of the long long integer.
+3.1. In the second element of the array, assign a value of 1.
+4. Return the array. 
+
+Pop: This removes the latest value of the stack/array - 2
+1. Initialize a relative data type pointer array with malloc with it's relative data type.
+2. Assign the first element of that array to 0.
+3. Assign the second element of that array with 2.
+4. Return the array.
+
+Clear: This removes all the value of the stack/array - 3
+1. Create a function with int pointer as the return and no parameter
+2. Initialize a pointer array with 0 as the first index and 3 in the second
+
+Capacity: Checks the total elements that the stack can carry - 4
+1. Initialize a function with int pointer as the return and no parameter
+2. Initialize a pointer array with 0 as the first index and 4 in the second
+
+Add: This adds value to the stack with a specified index 5
+1. Initalize a function with int pointer with a parameter of value, and int index
+2. Initalize a pointer array with the value as its first element, 5 as the second, and third as the index
+
+Remove: This removes the value within a stack with a specified index - 6
+1. Initialize a function with int pointer with a parameter of int index
+2. Initalize a pointer array that takes the index as its first element and then assign a value of 6 to the second index
+
+Peak: This shows or returns the latest value of the stack - 7
+1. Initalizea function with int pointer without a parameter
+2. Initialzie a pointer array that has zero as its first element and then assign a value of 7 to the second index
+
+Search: This searches the value within a stack - 8
+1. Initalize a function with int pointer with a parameter that takes a value
+2. Initalize a pointer array that has value as its first element and then assign a value of 8 to the second index
+
+
+
+---------------- Pseudocode ---------------------------------------------------------------------------------------------
+
+
+include stdio
+include stdlib
+
+
+int*push(lld){
+    int pointer[1] = long long int; pointer[2] = 1;
+    return pointer;
+}
+
+int*pop(){
+    int pointer[2] = 2;
+    return pointer;
+}
+
+int* clear(){
+    int pointer[2] = 3;
+    return pointer;
+}
+
+int* capacity(){
+    int pointer[2] = 4;
+    return pointer;
+}
+
+int* add(lld, index){
+    int pointer[1] = lld; pointer[2] = 5; pointer[3] = index;
+    return pointer;
+}
+
+int* remove(index){
+    int pointer[2] = 6; pointer[3] = index;
+    return pointer;
+}
+
+int* peak(){
+    int pointer[2] = 7;
+    return pointer;
+}
+
+int* search(lld){
+    int pointer[1] = lld; pointer[2] = 8;
+    return 0; 
+}
+
+
+
+void javaInt(int pointer){
+
+int pointer = int pointer;
+int counter = 1, push = 0, pop = 63;
+
+
+    typedef struct integer{integer array;} stack;
+
+    for(number of elements in that struct integer array){
+        initalize every element in that struct int array with 0;
+    }
+
+    switch(pointer[1]){
+        case push: 
+            while(counter){
+                if(array[push] == 0){
+                    array[push] = pointer[0];
+                    break;
+                }
+                if(counter == 65){
+                    print "index out of bounds";
+                    break;
+                }
+                push++, counter;
+            }
+            break;
+        case pop:
+            while(counter){
+                if(array[pop] != 0){
+                    array[pop] = 0;
+                    break;
+                }
+                if(counter == 65){
+                    print "index out of bounds";
+                    break;
+                }
+                pop--, counter++;
+            }
+            break;
+        case clear:
+            while(push is not equal to 64){
+                array[push] = 0;
+                push++;
+            }
+            break;
+        case capacity:
+            print size of array;
+            break;
+        case add: 
+            array[pointer[3]] = pointer[0];
+            break;
+        case remove:
+            array[pointer[3]] = 0;
+            break;
+        case peak:
+            while(counter){
+                if(array[pop] != 0){
+                    print array[pop];
+                    break;
+                }
+                if(counter < 0){
+                    print "index out of bounds";
+                    break;
+                }
+                pop--, counter++;
+            }
+            break;
+        case search:
+            while(counter){
+                if(array[pointer[1]] == array[push]){
+                    print index of that array[push+1];
+                    break;
+                }
+                if(push > 63){
+                    print -1;
+                    break;
+                } 
+                push++;
+            }
+        default:
+            print "\n\nerror";
+            break;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

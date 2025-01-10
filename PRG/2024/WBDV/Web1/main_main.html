@@ -1,0 +1,156 @@
+<!--
+
+HTML is defined as Hypertext Markup Language, and it is the foundation of every websites. In HTML, we have tags and elements. Tags are a pair of symbols contained in a pair of angle brackets, and these tags will contain contents for the web page. Elements are a combination of tags and contents; so if a tag has a content, it is called an element. There are many tags, and in every HTML document we must declare what type of HTML it is or what version:
+
+    <!DOCTYPE HTML> 
+
+This syntax is to declare the latest version of HTML for an HTML document. Now, every HTML document must also contain a root element,
+
+    <HTML></HTML>
+
+This is the syntax for the root element, and for the last tag will always contain a forward slash, except hr and line break. This root element will contain the contents of your web page through the head and body,
+
+    <head></head>
+    <body></body>
+
+This is the head and body tags. The head will contain the information about your web page, while the body will contain the contents of your web page. In the head, you can initialize the title of your website through
+
+    <title></title>
+
+This can assign the title of your website. Now for the head, there are a lot of things you can do, like initializing a header text, paragraph text, and host hyperlinks for links,
+
+    <h1-h7></h1-h7> (goes from h1-h7, depends on the size of the header)
+    <p></p> (static paragraphs)
+    <pre></pre> (dynamic, meaning whatever is changed in the code editor will 
+                be implemented on the website)
+    <a></a> (hyperlinks)
+
+You can also have line breaks and hr, or to have a big long line to separate something
+
+    <br> (line break)
+    <hr> 
+
+You can also have nested tags,
+
+    <p>
+        <br>
+            <p></p>
+        </br>
+    </p>
+
+To further expand the a tag or anchor tag, and most of HTML tags have attributes, typically name value pair, that modifies a behaviour of an element,
+
+    <a href=""></a>
+
+The href is the attribute and is used to contain links for the anchor to be clicked and directed into that link. The meaning of href is hypertext reference. To put it simply, the attributes will put a purpose to every elements or imply what they should do. These attributes are optional, and here's a list
+
+    href="" - for referencing links, although this can do a lot
+                - mailto:email.here : for direct emailing
+                - filepath/file : for linking to another HTML document
+    target="_" - window manipulation
+                - _self : open in the same tab
+                - _blank : open in a new tab
+                - _parent : opens link in parent frame
+                - _top : opens the link in full body of the window
+    title="tooltip" - this is for tooltips when hovered to a button
+
+
+--
+Image
+    You can import or display images using the tag,
+    
+        <img 
+        src="file_path"
+        alt="text_here"
+        height/width="number"
+        >
+
+    And it doesn't need a closing tag. It also has attributes such
+    as src to reference your image, alternative to show what the image 
+    is or any text if the image does not show, and height and width to 
+    control how the image will be in the web page. Also, if you only 
+    have height included and not the width, the width will be automatically 
+    adjusted, vice-versa. And with image sources, you can place them or 
+    make them as hyperlinks using the a tag with or without attributes.
+
+Audio
+    You  can import or display the controls of an audio using the
+    tag,
+    
+        <audio controls autoplay muted loop>
+            <source src="file_path" (optional) type="type_of_audio
+            :audio/mpeg(mp3)
+            :audio/wav(wav)
+            ...
+            "
+            >
+        </audio>
+
+    With a pair of audio tags, you can import any songs from your 
+    system. Also, in sourcing or referencing your audio, you need
+    to have a tag called source, and it does not have an ending tag,
+    to source your audio by using the attribute such as src. In the
+    attributes of the audio tag, we have control to display the
+    controls of the audio such as play, volume, playback, etc. And
+    then we have the autoplay, muted, and loop. You can also have
+    fallbacks for backup songs if the original song is corrupted
+    or a user web browser's does not support the extension, and to 
+    have this fallback is to use another source tag with either the 
+    song in another extension or the same.
+
+
+Video 
+    
+    You can import a pair of video tag to source a video, and how
+    you do it is the same as you do in audio and image, wherein
+    you can ajust the height or width of the video within the video
+    tag, and you can also source the video through the video tag
+    or via the source tag inside the video tag.
+
+        <video
+            height/width="0px"
+            controls
+            autoplay
+            src="path_here"
+            loop
+            muted        
+        >
+            <source src="path_here" type="audio/mp4/webm/...">
+        </video>
+
+    You can also make the video as hyperlink using the pair of 
+    a tags.
+
+
+Favicon
+
+        A favicon is the icon in the head of your webpage. You
+        can have a favicon by having the link tag,
+
+            <link rel="icon" type="image/icon" href="file_path">
+
+        This link tag, a self-closing tag (which are tags that
+        does not have a pair), links your document to an external
+        source. The relationship tag or the rel specifies what 
+        you will import. You also have the type tag to specify 
+        the extension of your file, and then the href tag.
+
+        Most modern web browsers accept exensions such as ico,
+        png, git, jpg, and svg. And the recommended dimensions
+        of the icon is typically 96px by 96px or 176px by 176px
+        if you edit it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -->
+

@@ -1,0 +1,127 @@
+    Student Management System With Quiz
+    This is similar to Google Forms or Canvas, in such that you'll enter your Name, Section, and ID to and access the quiz, but in this program
+    students may perform tasks such as viewing of their past quizzes, their grades, or generally their school records. This program -
+    will have 3 quizzes, and each of those quizzes must have their scores contained in a list or array.
+
+0.0 Extras
+    1. Initialize right question and answers for quiz 1 & user right answers
+    2. Initialize a string array for log in: User and pass
+    3. Initialize a stack of integer
+    4. While loop initialization, start = 0
+    5. While loop iteration of prompt user, continues = 0; while loop authenticatation end for program 1.0, authentication = 0
+    6. String var for authenticatation of real log in info
+    7. Int var for temporary storages
+
+0.1 Log in
+    0. While loop starts (value 1) : if value == -0, while loop stops
+    1. Prompt user for ID, name, and section. 
+    2.(uses stack) If valid, go to program 1; else, enter prompt user if user will continue or not; if continue, go back to no.1; else, end (clears stack : end while loop)
+1.0 UI
+    1. Display a gui containing two options of [subject : grade]
+    2. If grade, display a gui coitaining one option [FOPR], and then display a gui containing [quiz 1]; in that quiz one, display the questions.
+    - 5 questions. If user has a correct answer, increment 1. If done, show total score of user.
+    2.1. If grade, display a gui containing one option of [FOPR]; show grade 
+    2.2 (uses stack) Else, exit through cancel (clears stack : end while loop)
+
+temp% ideas
+1. Uses stack for while loop continuation or end. This uses the return values of empty. If true, end; otherwise continue.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+import stack, joptionpane;
+
+
+public method{
+    public static method(){
+        String[] answers = mew String[10];
+        int user_answers = 0, start = 0, continues = 0, authentication;
+        String[] authenticate = new String[2];
+        Stack int; stack.push(10); stack.push(1); stack.push(2); stack.push(3); stack.push(4);
+        String[] ui_start = {"Subject", "Grade", "Log out"};
+        String[] subjects = {"FOPR", "cancel"};
+        String[] Quiz_options = {"QUIZ 1", "Cancel"};
+        String[] quiz1FirstQuestion = {//What is an array?
+                                        "A list of related data types",
+                                        "A list of non-related data types",
+                                        "It is only one element",
+                                        "None of the above"
+                                                                            }
+        String[] quiz1SecondQuestion = {//What is a loop
+                                        "A loop is an interation of similar codes",
+                                        "A loop is a collection of similar codes",
+                                        "This is a format specifier for printing a variable",
+                                        "All of the above"
+                                                                                                    }
+        String[] quiz1tThirdQuestion = {//Choose the right naming convention of variables
+                                        "Variables can have numbers as their first letter",
+                                        "Variables can have letters and numbers, but cannot have a number as its first letter"
+                                        "Variables cannot have numbers"
+                                        "None of the above",
+                                                                }
+        int rightAnswerQ1Counter = 0, ui_sub = 0;
+        int[] rightAnswersQ1 = {0, 0, 1};
+                    while(stack is not empty){
+                    //log in
+                        authenticate[0] = j method, input dialog
+                        autheticate[1] - j method, input dialog
+
+                        while(stack.search(10) != -1){
+                            //UI
+                            if(autheticate indeces 0 - 1 is valid(authentication is equal to 1)){
+                                int ui_main = OptionPane(null, null,"Student UI", yes no, info, null, ui_start, 0);
+                                
+                                if(ui_main is subject){
+                                    //if subject    
+                                    while(stack.search(3) != -1){
+                                        ui_sub = OptionPane(null, "Choose a subject", "Subject", yes no, info, null, subject, subject[0]);
+                                        if(ui_main is equal to fopr){
+                                                if(quiz is equal to quiz 1){
+                                                        if(Quiz_options = OptionPane(null, "Choose Quiz", "Quiz", yes no, info, null, Quiz_options, Quiz_options[0]) == 0){
+                                                            int firstQ = OptionPane(null, "What is an array?", "Question 1", yes no, question, null, quiz1FirstQuestion, quiz1FirstQuestion[1]);  
+                                                            int secondQ = OptionPane(null, "What is a loop?", "Question 2", yes no, question, null, quiz1SecondQuestion, quiz1SecondQuestion[1]);
+                                                            int thirdQ = OptionPane(null, "Choose the right naming convention of variables?", "Question 3", yes no, question, null, quiz1ThirdQuestion, quiz1ThirdQuestion[1]);
+                                                            (create three if statements here that scans the right answers and increments rightAnswerQ1Counter);
+                                                                if(rightAnswerQ1Counter is within 2 and 3){
+                                                                    showMessageDialog(null, "Congrats! Your score is "+rightAnswerQ1Counter);
+                                                                }else{
+                                                                    showMessageDialog(null, "You failed. Your score is"+rightAnswerQ1Counter);
+                                                                }
+                                                        }
+                                                }
+                                        }else{
+                                            stack.pop();
+                                        }
+                                    }
+                                }else if(ui_main is grade){
+                                    while(stack.search(4) is not equal to negative one){
+                                        ui_sub = OptionPane(null, "Choose subject", "Grade", yes no, info, null, subjects, subject[0]);
+                                            if(ui_sub is FOPR){
+                                               if(Optionpane(null, "Quiz Grade", "Grade", yes no, info, null, Quiz_options, 0) == 0){
+                                                    showMessageDialog(null, rightAnswerQ1Counter);
+                                               }
+                                            }else{
+                                                stack.pop();
+                                            }
+                                    }
+                                }else if(ui_main is log out){
+                                    stack.remove(10);
+                                }
+                                
+                                    
+                            }else{
+                                while(stack.search(2) != -1){
+                                j method, confirm dialog : "Invalid username and password. Do you want to continue?"
+                                    if(j method is true){
+                                        authenticate[0] = j method, input dialog
+                                        autheticate[1] - j method, input dialog
+                                            if(authenticate indeces 0 - 1 is true){
+                                                stack.pop;
+                                            }
+                                    }else{
+                                        stack.clear;
+                                    }
+                            }
+                        }
+                    }
+                }
+    }
+}

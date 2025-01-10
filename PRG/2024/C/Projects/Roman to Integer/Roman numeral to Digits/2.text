@@ -1,0 +1,82 @@
+0. Start
+1. Input standard library, input and output, math functions, and string function
+2. Create an enumeration and assign a nickname to it
+3. Create a struct with char characters consisting of the all numerals and don't initialize it/ or 1D array
+4. Inside that enumeration is the roman numerals with its values initialized
+6. Create a char return function. Within it is a switch statement that reads individual user input and result, and that result must be the sum of the before run, and return them
+5. Create a main function with a result integer variable and create a nickname for it
+6. Inside that main function, declare and assign a name to that enumeration without initializing it
+7. Prompt user for input of roman numerals and initialize the value of structs, and then capitalize the input
+8. Read user input and if they are not roman numerals then let the user go back to step 7
+9. If the user input is valid, then identify its corresponding roman numerals, and if it is highest to lowest, vice versa
+10. If highest to lowest, add the individual roman numerals to each other; otherwise differentiate the roman numerals to each other
+11. Print result
+12. End
+
+include standard library
+include input and output
+include math functions
+include string functions
+
+typedef enumeration roman{I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000} romnum;
+
+//typedef struct{I; V; X; L; C; D; M;} input;
+
+char convert(char x[64], int result){
+    switch(x[64]){
+        case 'I':
+        romnum is equal to I;
+        result is the sum and equal of romnum;
+        return result;
+        break;
+        case 'V':
+        romnum is equal to V;
+        result is the sum and equal of romnum;
+        return result;
+        break;
+        case 'X':
+        romnum is equal to X;
+        result is the sum and equal of romnum;
+        return result;
+        break;
+        case 'L':
+        romnum is equal to L;
+        result is the sum and equal of romnum;
+        return result;
+        break;
+        case 'C':
+        romnum is equal to C;
+        result is the sum and equal of romnum;
+        return result;
+        break;
+        case 'D':
+        romnum is equal to D;
+        result is the sum and equal of romnum;
+        return result;
+        break;
+        case 'M':
+        romnum is equal to M;
+        result is the sum and equal of romnum;
+        return result;
+        break;
+        default:
+        printf("new line Syntax_error");
+    }
+}
+int main(){
+    //input user;
+    romnum roman;
+    char user[64];//if a string is possible to use for user input, then how can you read individual character in it?
+    int result;
+
+    printf("Input numerals: ");
+        do{
+            scanf("%c", &user[i]);
+            strupr(user[i]);
+            user(strlen(user) - 1) = '\0';//removing the newline of scanf
+            convert(user[i], result);
+        }while(user[64] == \n);
+    return 0;
+}
+
+

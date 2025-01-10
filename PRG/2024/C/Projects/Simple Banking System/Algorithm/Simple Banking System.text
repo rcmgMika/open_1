@@ -1,0 +1,168 @@
+`   Simple Banking System
+"Perform basic banking operations such as account creation. deposits, withdrawals, and checking account balance"
+
+Notes:
+1. We don't yet have data to check or scan if an existing username exists; thus we can't tell the user that the input is already existing 
+
+Program 0: Prompt user if he has an account already
+Program 1: Sign up
+Program 2: Log in
+Program 3: Prompt user either for program 4, 5, or 6
+Program 4: Deposit 
+Program 5: withdrawals
+Program 6: Check account balance
+
+----------------------------------------------Algorithm----------------------------------------------------------
+Program 0: Prompt user if he has an account already - DONE
+1. Prompt user if he has an account, if not proceed to program 1; else proceed to program 2
+
+Program 1: Sign up - DONE
+1. Prompt user for username and pin password
+2. If user inputs words in the password, go back to step 2; else tell user the account has been created
+
+Program 2: Log in 
+1. Prompt user for valid and existing username and pin password
+2. If valid, proceed to program 3
+
+Program 3: Prompt user either for program 4, 5, or 6 //another inside if statement of program 2
+1. Prompt user what to do: If user inputs deposit, go deposit; else if user inputs withdrawal, go withdrawal; else if check account balance; else log out
+
+Program 4: Deposit
+1. Prompt user how much to deposit in dollars
+2. Scan if user has that ammount of money; if yes proceed to 3; if no go back to 1
+3. If user input words, print out invalid input; else print out deposited successfully 
+
+Program 5: Withdrawals
+1. Prompt user how much to withdraw
+2. If user inputs words, print out invalid input
+3. Else scan the user input if the money to be withdrawn is valid
+4. If user inputs too much value or a non-existent value, print out not enough cash!
+5. Else print out withdrawn successfully, and then assign 0 to the constant array of deposit
+
+Program 6: 
+1. Print out the account balance
+
+---------------------------------------------Pseudocode----------------------------------------------------------
+
+#include standard input
+#include string functions
+#include sleep and usleep functions, standard and not windows
+
+digit_calc function(integer x and y);
+sleep_ function(integer x);
+
+typedef struct info{int _compare; int _compare2; char yesno[64]; char question[64]; char username[64]; int pin[64]; int n; int count; int user_interface; int amount_scan; int amount; int total; int deposit; int withdraw_money} input;
+
+int main()
+{
+input individual1;
+input individual2;
+input compare;
+individual1.count = 0;
+strcpy(individual2.yesno, "NO");
+input existing;
+existing.username = "rob@gmail.com";
+existing.pin = "123456";
+existing.amount
+int o;
+
+input existing;
+strcpy(existing.username, "robby.garcia1006@gmail.com");
+existing.pin[0]; 123456;
+existing.ammount = 100;
+
+
+    printf("Do you have an account? ");
+    scanf("%s", individual1.question);
+    individual1._compare = strcmp(individual1.question, individual2.yesno);
+
+        if(individual1._compare == no) - SIGN IN -
+        {
+            printf("Input Username: ");
+            scanf(address to individual1.username);
+            
+            do{
+                printf("Input 6 Digit Pin: ");
+                Scanf(address to individual1.pin[1]);
+                individual1.n = individual1.pin[1];
+                individual1.count = 0;
+                    
+                    o = digit_calc(n, count);
+
+                        if(o is equal to 6){
+                            printf("Verifying, please wait");
+                            sleep_();
+                            printf("newline, Verified successfully. The account has been created!"");
+                        }else{
+                            printf("Try again.\n"); 
+                        }
+            }while(o is not equal to 6);
+        }else if(individual1_compare == yes) - LOG IN
+        {
+            printf("Proceeding to log in page.");
+            sleep_();
+            printf("newline, Proceeded to log in page successfully");
+
+            do{
+                printf("newline, Enter valid username: ");
+                scanf(address to compare.username);
+                compare._compare = strcmp(compare.username, existing.username);
+                printf("Enter valid pin: ");
+                scanf("address to compare.pin");
+                compare._compare2 = strcpy(compare.pin, existing.pin);
+
+                    if(username and pin is valid){ - LOG IN END 
+                        printf("newline, Logged in successfully!, newline, Proceeding to user interface");
+                            sleep_(3);
+                                printf("Proceeded successfully! Now where do you want to go?, newline, [Deposit] - 1, newline, [Withdraw] - 2, newline, [Account Balance] - 3");
+                        scanf(address to user_interface);
+                            switch(user_interface)
+                            {
+                                case 1: - DEPOSIT 
+                                        printf("Enter ammount to deposit: ");
+                                        scanf(address to existing.deposit);
+                                        compare.total = existing.deposit + existing.ammount;
+                                        printf("Deposited successfully!");
+                                    break; 
+                                case 2: - WITHDRAW
+                                    do{
+                                        printf("Enter ammount to withdraw");
+                                        scanf(address to existing.amount_scan);
+                                            if(existing.amount_scan < existing_ammount){
+                                                printf("Please wait");
+                                                    sleep_(3)
+                                                printf("Deposited successfully!");
+                                                existing.ammount_scan - existing.ammount;
+                                                printf("Balance: existing.ammount);
+                                            }else{
+                                                printf("Input invalid. Please try again.");
+                                            }
+                                    }while(run if ammount.scan is still less than the existing amount);
+                                    break;
+                                case 3: - ACCOUNT BALANCE
+                                    printf("Account balance: existing.ammount");
+                                    break;
+                            }
+                    }
+                    }else{
+                        printf(Input.incorrectly, please try again.\n);
+                    }
+            }while(compare._compare == no and compare.pin[0] is not equal to existing.pin[0]);
+        }else{
+            printf("Invalid input.");
+        }
+}
+
+function integer return type, digit_calc name, parameters int x and y{
+    while(x is not equal to 0){
+        x = x/10;
+        post increment y;
+    }
+}
+
+function void return type, sleep_ name, with int x as parameter{
+    for(int f is equal to zero, will run if less than x, post increment f){
+        delay for 1 second;
+        printf(".");
+    }
+}

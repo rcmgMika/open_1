@@ -1,0 +1,36 @@
+----------------Algorithm-------------------
+1. Prompt user for 5 inputs of numbers and 1 input for target output
+2. Assign the numbers into an array, and the target for a separate variable
+3. Scan through the values of the array if those values, if added together, adds to the target values
+4. If there are two values who equals to the target value, print those values; else print "no possible combination".
+
+----------------Pseudocode------------------
+
+void twosum(int x[], int size, int target){
+    int e[random_size];
+    int scan = 0;
+        for(run until int size is reached){
+            if(index1 of x and index2 of x is equal to target){
+                    e[index1] = dereference to index1;
+                    e[index2] = dereference to index2;
+                        printf("[index1 & 2]", e[index1] & 2);
+                        increment scan;
+            }
+        }
+        if(scan is equal to zero){
+            printf("No possible combination.");
+        }
+}
+int main(int argc, char *argv[]){
+    int* pTr = (must point to integer)malloc(pTr must have a size of 64 elements of integers);
+    int Target;    
+        interate//5times
+            printf("Enter first number: ");
+            scanf("format to int, address to *(pTr + _index)");
+
+            printf("Enter target number: ");
+            scanf("format to int", address to *pTarget);
+
+    twosum(arguments);
+    free(pTr); 
+}
