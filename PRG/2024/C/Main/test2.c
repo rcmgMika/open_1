@@ -1,48 +1,54 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 
-int lengthOfLongestSubstring(char* s) {
-    // if a != b && a != c count++ || b == c, sum[0] = count; 
-    // count = 0, repeat first line
-    static int output[64], count = 0, j=0, index; bool fuck = true;   
-    printf("length: %d\n", strlen(s)-1);
-    for(int i=1; i<strlen(s);i++){
-        for(int shit = j; shit<i; shit++){
-            printf("%c, %c\n", s[shit], s[i]);
-            if(s[shit] == s[i] || i == strlen(s)-1){
-                if(fuck){
-                    output[index++] = i - 0;
-                    fuck = false;
-                }else{
-                    output[index++] = j - output[index-1];
-                }
-                j = i+1;
-                printf("count == %d || j=%d, i=%d, output 1=%d, output 2=%d\n", count, j, i, output[0], output[1]);
-                i++;
-                break;
-            }
-           //printf("j = %d, i = %d\n", shit, i);            
-        }
-        //count++;
-    }
-    int highest = output[0];
-    for(int i = 1; i < sizeof(output)/sizeof(output[0]); i++){
-        if(highest < output[i]){
-            highest = output[i];
+int lengthOfLongestSubstring(char *s)
+{
+    int maxLength = 0, start = 0, charIndex[256] = {0};
+
+    for (int end = 0; end < strlen(s); end++)
+    {
+        char currentChar = s[end];
+
+        if (charIndex[currentChar] > start)
+            start = charIndex[currentChar];
+
+        charIndex[currentChar] = end + 1;
+        int currentLength = end - start + 1;
+
+        if (currentLength > maxLength)
+        {
+            maxLength = currentLength;
         }
     }
-    return highest;
+    return maxLength;
 }
 
-int main(){
-    char c[] = "abccabcd";
-    char fuck[] = "pwwkew";
-    char test1[] = "abcabcbb";
-    char test2[] = "bbbbb";
-
-    //printf("\n\n\n\nhighest: %d", lengthOfLongestSubstring(test2));
-    char sike[] = "Hello there";
-    printf("%s", sike);
+int main()
+{
+    char s[] = "abcabcbb";
+    char c[] = "bbbbb";
+    printf("The length of the longest substring without repeating characters is: %d\n", lengthOfLongestSubstring(c));
     return 0;
+
+    /*
+a = 1 (0) (1)
+b = 2 (1) (2)
+c = 3 (2) (3)
+start = 0;
+a (3) (3) -> (a = 1 > start) -> start = 1 -> a = 4;
+start = 1;
+b (4) (3) -> (b = 2 > start) -> start = 2 -> b = 5;
+start = 2;
+c (5) (3) -> (c = 3 > start) -> start = 3 -> c = 6;
+start = 3;
+d = 1 (6) (4)
+start = 3;
+a (7) (4) -> (a = 4 > start) -> start = 4 -> a = 8
+start = 4;
+a (8) (1) -> (a = 8 > start) -> start = 8 -> a = 9
+start = 8;
+a (9) (1) -> (a = 9 > start) -> start = 9 -> a = 10
+start = 10
+
+*/
 }

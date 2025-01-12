@@ -1,46 +1,66 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-int unique(char* x){
-    for(int i = 0; i < strlen(x); i++){
-        for(int j = 0; j < strlen(x); j++){
-            if(x[j] == x[i])return 0;
+int unique(char *x)
+{
+    for (int i = 0; i < strlen(x); i++)
+    {
+        for (int j = i + 1; j < strlen(x); j++)
+        {
+            if (x[i] == x[j])
+                return 0;
         }
     }
-
-    return 1;//if unique
+    return 1;
 }
+int lengthOfLongestSubstring(char *s)
+{
+    if (strlen(s) == 0)
+    {
+        return 0;
+    }
+    char temp[64] = "\0";
+    int highest = 1, index = 0;
 
-int lengthOfLongestSubstring(char* s) {
-    int k = 1, highest[64], index = 0;
-    char temp[64];
-    for(int i = 0; i < strlen(s); i++){
-        for(int j = i; j < k; j++){
-            if(s[j] == s[k]){
-                highest[index++] = k;
-                k = 1;
+    for (int i = 0; i < strlen(s); i++)
+    {
+        temp[index++] = s[i];
+        for (int j = i + 1; j < strlen(s); j++)
+        {
+            temp[index++] = s[j];
+            temp[index] = '\0';
+            if (unique(temp))
+            {
+                if (highest < strlen(temp))
+                {
+                    highest = strlen(temp);
+                }
+                if (j >= strlen(s) - 1)
+                {
+                    i = strlen(s) - 1;
+                    return highest;
+                    break;
+                }
+            }
+            else
+            {
+                strcpy(temp, "\0");
+                index = 0;
                 break;
             }
-            k++;
         }
     }
-    int this = highest[0];
-    for(int i = 1; i < 64; i++){
-        if(this < highest[i]){
-            this = highest[i];
-        }
-    }
-
-
-    return this;
+    return highest;
 }
 
-int main(){
+int main()
+{
     char c[] = "abccabcd";
     char fuck[] = "pwwkew";
     char test1[] = "abcabcbb";
     char test2[] = "bbbbb";
+    char shit[] = "";
 
-    printf("\n\n\n\nhighest: %d", lengthOfLongestSubstring(test2));
+    printf("\n\n\n\nhighest: %d", lengthOfLongestSubstring(shit));
     return 0;
 }
