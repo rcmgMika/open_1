@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
@@ -63,4 +64,17 @@ int main()
 
     printf("\n\n\n\nhighest: %d", lengthOfLongestSubstring(shit));
     return 0;
+}*/
+
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    double e = 2.718281828459045, n = 1, euler = 0;
+    while(euler != e){
+        euler = pow((1+1/n), n); n++; printf("%.20lf\n", euler);
+    }
+    printf("\n\nn = %d", n);
+
+
 }
