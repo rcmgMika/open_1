@@ -13,7 +13,41 @@
 #       Syntax:  
 #           print(f"your name is {name}")
 #
-#------------------------------------------------------------------------------------
+#       The print function has multiple parameters also, you can append
+#   or concatenate strings with the colon like print("Hello", "World"),
+#   or parameters such as sep or separate, end, file, and flush. The sep
+#   parameter makes the concatenated strings separated with whatever you
+#   want to separate them, like say a dash. The end parameter appends the
+#   last string of your print statement, and as default they are the new 
+#   line escape sequence. The flush parameter is used to flush buffers or 
+#   print them immediately to the terminal. These buffers are stacked if
+#   conditions are not met like program extermination, buffer is full, 
+#   newline encounters, and etc. And then the file parameter which is the   
+#   same as C's file variable which includes append, write, and read, 
+#   although Python has more file manipulation like a+ and so on.
+#
+#       Syntax:       
+#           print(f"", sep="", end="", file="", flush=False/True)
+#
+#       To read, append, or write files you can use the with keyword, 
+#   followed by the open which has two parameters: file path, flags. And
+#   then this open is followed by the variable name and then a colon to
+#   indicate what you are going to do with it, like say use the file parameter.
+#   
+#       Syntax:
+#   
+#           with open(file_path, flag) variable_name:
+#               print(example_here, file=variable_name)
+#
+#   
+#
+#   
+#
+#   
+#
+#   
+#
+# ------------------------------------------------------------------------------------
 #   Variables:
 #       These are containers for values.       
 #
@@ -217,71 +251,79 @@
 #
 #
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#------------------------------------------------------------------------------------
+#
+#   Format Specifiers
+#
+#       Format specifiers are done with f-string or formatted string literals. It has 
+#   two parameters, value : flags. The flags is almost the same as Java, and they are 
+#   used to format the value.
+#
+#       Syntax flags:
+#           :.f - Same as C, wherein you indicate the precision of the float 
+#           :0 - Same as Java, wherein you indicate zeros before the value
+#           :, - Thousandth place indicator
+#           :+ - Indicates if a value is negative or positive
+#           :space/" " - Removes the positive sign, same as + flag
+#           :> - left allign
+#           :< - right allign
+#           :^ - center allign
+#           :number - add spaces
+#
+#       We can actually combine the different flags, and this is called mix-match.
+#
+#
+#------------------------------------------------------------------------------------
+#
+#   
+#   Loops
+#
+#       Python has a simple syntax for the while loop and the for loop, of which the 
+#   while is still an iteration until the condition is not true, and a for loop is still
+#   used to iterate a fixed number of times. The for loop in Python can be implemented
+#   using three different ways; the range function, which has the same parameters as the
+#   index operator although if the argument is only one then it will be considered as the 
+#   end which is exclusive or >len-1. The others are iterable objects such as strings and
+#   sequences or collections.
+#
+#       Syntax:
+#           for i in range(start, end, step):
+#           for i in reversed(range(start, end, step)):
+#           for i in string:
+#           for i in collection:
+#       
+#           while (condition is true):
+#
+#
+#
+# ------------------------------------------------------------------------------------
+#
+#   Colletions 
+#       
+#       Collections are data structures or variables that can store multiple data types.
+#   Python's collection can actually store difference data types in comparizon to Java's
+#   and C's arrays and arraylist. 
+#
+#       List is one of the type of collections in Python that is mutable by itself and
+#   its elements and then are ordered, meaning it will not change during or after runtime.
+#   Lists can also handle duplicate elements. It can be accessed with the index operator.
+#       Set is unordered or random and its elements are immutable, meaning it will not be 
+#   changed after assignment, but the set itself is mutable. This means that you can add 
+#   values to the set but not change its value. It will also not handle duplicates. You
+#   can also type cast into set in scenarios such as an empty {}. This is by default a
+#   dictionary, and so you might want to type cast it into a set, name = set({}), if
+#   you want an empty set.
+#       Tuple is an ordered collection but itself immutable, unlike sets, but its values
+#   are mutable and that means you can use the index operator to access its elements. 
+#   You cannot add elements to a tuple once it is initialized, and this is why its  
+#   immutable. It has a fixed size like arrays in Java and C. But you can add mutable and
+#   immutable values to it, making it dynamic as you can add values to those collections
+#   while being in the tuple. 
+#
+#       Syntax:
+#           list = []
+#           set = {}
+#           tuple = (), although indicated by ","
 #
 #
 #
