@@ -59,6 +59,7 @@ class user extends book{
     String date_of_registration;
     ArrayList<book> favourites = new ArrayList<book>();
     ArrayList<String> history = new ArrayList<String>();
+    ArrayList<String> search_history = new ArrayList<>();
 }
 
 class SignUp extends user{
@@ -92,15 +93,16 @@ class SignUp extends user{
 }
 
 class libr{
-    private static String[] options = {"Find Book", "Favourites", "History", "Return Book", "Log Out"};
+    private static String[] options = {"Find Book", "Favourites", "History", "Log Out"};
     
     public static Integer libr_module(){
-        return JOptionPane.showOptionDialog(null, "Welcome to Robby's open-sourced library! Please enjoy your stay.", "Library", 0, 1, null, options, options[4]);
+        return JOptionPane.showOptionDialog(null, "Welcome to Robby's open-sourced library! Please enjoy your stay.", "Library", 0, 1, null, options, options[3]);
     }
 
     public static void libr_favourites(user user){
         if(user.favourites.size() == 0){
             JOptionPane.showMessageDialog(null, "You have no favourites as of now! Come again later!", "Library", JOptionPane.NO_OPTION);
+            return;
         }
         StringBuilder temp = new StringBuilder();
         for(int i = 0; i < user.favourites.size(); i++){
@@ -111,5 +113,7 @@ class libr{
         Integer book_index = Integer.parseInt(list_of_favourites);
         user.showContents(user.favourites.get(book_index-1));
     }
+
+
 
 }

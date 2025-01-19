@@ -1,6 +1,6 @@
 package com.librarymanage;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Main {
     public static void main(String[] args) {
@@ -294,12 +294,28 @@ public class Main {
 
             while (true) {
                 Integer current_state = libr.libr_module();
-                if (current_state == null || current_state == 4) {
+                if (current_state == null || current_state == 3) {
                     break;
                 } else if (current_state == 0) {
-
+    // The search algorithm is case sensitive. And next time, use proper snake and camel 
+    //cases.
+                    String[] search_options = {"Search by Author", "Search by Title", "Search by Genre", "Back"}; 
+                    while(true){
+                        Integer pick = JOptionPane.showOptionDialog(null, "Please choose what to search!", "Library", 0, 1, null, search_options, search_options[0]);
+                        if(pick == null || pick == 3){
+                            break;
+                        }else if (pick == 0){
+                            database.SearchByAuthor();
+                        }else if (pick == 1){
+                            database.SearchByTitle();
+                        }else if (pick == 2){
+                            database.SearchByGenre();
+                        }
+                    }
                 } else if (current_state == 1) {
                     libr.libr_favourites(database.person.get(database.current_user));
+                } else if (current_state == 2) {
+                    database.ShowHistory();
                 }
             }
         }
