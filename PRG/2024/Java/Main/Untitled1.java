@@ -769,11 +769,15 @@ public class Untitled1{
          * 
          *      The logic is that, while the parent does give everything, it causes it to
          *  override when we assign it outside any methods. And instead, we assign values 
-         *  to the methods all the while ensuring proper assignment using the this 
-         *  keyword.
+         *  to the methods or to the variables of the child, all the while ensuring 
+         *  proper assignment using the this keyword.
          *  
-         * 
-         * 
+         *      The approach to inheritance is the relationship of general to specific. 
+         *  The parent class must have the general characteristic such as employee, and
+         *  the child class must have specific characteristic such as a manager that is
+         *  an employee. In other words, the parent class must have the characteristics 
+         *  of a group. This is also called an "is an" relationship, wherein in the 
+         *  example, a manager is an employee.
          * 
          * 
          * 

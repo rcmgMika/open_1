@@ -1,6 +1,9 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true,
-    "files.associations": {
-        "stdio.h": "c"
-    }
+  "java.debug.settings.onBuildFailureProceed": true,
+  "files.associations": {
+    "stdio.h": "c"
+  },
+  "java.project.sourcePaths": [
+    "2024/Java/Projects/Library Management/library/src"
+  ]
 }
