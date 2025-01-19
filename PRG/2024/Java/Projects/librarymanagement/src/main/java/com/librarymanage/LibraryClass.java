@@ -1,6 +1,7 @@
 package com.librarymanage;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import java.lang.StringBuilder;
 
 class book{
     String Book_name;
@@ -29,7 +30,7 @@ class book{
                     }else if(option_1_manager == 0){
                         index++;
                     }else if(option_1_manager == 1){
-                        System.out.println("Book made favourite!");
+                        database.person.get(database.current_user).favourites.add(book);
                     }
             }else{
                 option_2_manager = JOptionPane.showOptionDialog(null, "\n\n"+book.Contents.get(index), book.Book_name, 0, 1, null, options_2, options_2[2]);
@@ -40,7 +41,7 @@ class book{
                     }else if(option_2_manager == 1){
                         index--;
                     }else if(option_2_manager == 2){
-                        System.out.println("Book made favourite!");
+                        database.person.get(database.current_user).favourites.add(book);
                     }
                     if(index >= book.Contents.size()){
                         index = book.Contents.size()-1;
@@ -97,8 +98,18 @@ class libr{
         return JOptionPane.showOptionDialog(null, "Welcome to Robby's open-sourced library! Please enjoy your stay.", "Library", 0, 1, null, options, options[4]);
     }
 
-    public static void libr_favourites(user current_user_now){
-        JOptionPane.showMessageDialog(null,"Favourites: "+current_user_now.favourites.get(0).Book_name, null, 0);
+    public static void libr_favourites(user user){
+        if(user.favourites.size() == 0){
+            JOptionPane.showMessageDialog(null, "You have no favourites as of now! Come again later!", "Library", JOptionPane.NO_OPTION);
+        }
+        StringBuilder temp = new StringBuilder();
+        for(int i = 0; i < user.favourites.size(); i++){
+            temp.append(i+1).append(". ").append(user.favourites.get(i).Book_name).append("\n");
+        }
+        String list_of_favourites = JOptionPane.showInputDialog(null, "Current Favourite/s:\n"+temp, "Library", JOptionPane.NO_OPTION);
+        if(list_of_favourites == null)return;
+        Integer book_index = Integer.parseInt(list_of_favourites);
+        user.showContents(user.favourites.get(book_index-1));
     }
 
 }
