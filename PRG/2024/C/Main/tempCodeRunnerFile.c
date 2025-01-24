@@ -1,0 +1,1 @@
+sizeof(shit)/sizeof(shit[0])
