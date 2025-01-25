@@ -210,10 +210,217 @@ Table
         A table is a way for us to represent data. In html, we have a pair of table tags
         for defining a table, and then tr for table rows, th for table headers, and then
         td for table data. We also have attributes for these such as align and then if
-        center, right, or left.
+        center, right, or left. 
 
+    Syntax:
+        <table>
+            <tr>
+                <th></th>
+                <td></td>
+            </tr>
+        </table>
 
+----------------------------------------------------------------------------------------
+
+Button
+
+        A button is a clickable symbol. In HTML, it is implemented within button tags,
+        and that button tag can either be a hyperlink or have something to do with JS
+        like calling a function.
+
+        These buttons have a lot of attributes like font-size for the button's width
+        height, color for the font's color, border-radius for the rounded corners, 
+        and then onclick when calling functions.
+    Syntax:
+        <button 
+            onclick
+            font-size
+            color
+            border-radius
+        >
+            click_me
+        </button>
+
+----------------------------------------------------------------------------------------
         
+ID
+        Every HTML tag can have their own unique id with the id attribute. With this id,
+        it can be used with JS to manipulate elements.
+    
+    Syntax:
+        <button id="unique" onclick="changeName()">Click me</button>
+
+        <script>
+            function changeName(){
+                document.getElementById("unique").innerHTML = "Hello!"
+            }
+        </script>
+
+        The document class can be used as variable assignments to elements.
+
+----------------------------------------------------------------------------------------
+
+Form
+
+        A form is where users can have inputs to pass into a source. In HTML
+        a form is a pair of tags, and inside those tags we can put input, label,
+        select and option, textarea, and so on. There are a lot of attributes in
+        each of these tags, specifically in input because there are too many types
+        of user input although they can all be understood.
+
+    Syntax:
+        <form></form>
+            action="" - this is where the data is sent
+            method="" - requests specification, [POST] if condidential, and [GET]
+                        if insensitive.
+            enctype="multipart/form-data" - basically chops the file input into pieces
+        
+        <label></label>
+            for="id" - just like in button, wherein if you click this then it will
+                       direct you
+        
+        <input> (self-closing tag)
+            type="" - specify what type of input it will be
+                "text" - self-explanatory
+                "password" - self-explanatory
+                "email" - self-explanatory
+                "date" - self-explanatory
+                "number" - digits
+                "tel" - phone no.
+                "radio" - buttons
+                "checkbox" - self-explanatory
+                "reset" - clear form
+                "submit" - submit data
+                "file" - file inputs
+            placeholder="" - preview of what the user should enter
+            min="" - min number required
+            max="" - limit
+            minlenght="" - of a string
+            maxlenght="" - of a string
+            name="" - for grouping of data
+            required - a field will be requirede of input
+            pattern="[start-end]{minlength}symbol/void" - make patterns required
+            value="" value of the element
+            accept="" makes custom file ext requirements for file inputs
+        <select>
+            <option></option>
+                value="" - value of the element
+        </select>
+        <textarea></textarea>
+            row="" - specify the size of the box in terms of rows
+            cols="" - specify the size of the box in terms of columns
+
+
+----------------------------------------------------------------------------------------
+
+Header, Footer, Main
+
+        Header is the introductory statement of webpages, while footer is the ending, and
+        main is where your whole content is displayed. Inside the header are typically
+        navigation panels, and in the footer are copyright symbol, author, and about
+        the author or email.
+    
+    Syntax:
+        <header></header>
+        <main></main>
+        <footer></footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

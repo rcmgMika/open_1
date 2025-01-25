@@ -12,7 +12,7 @@ Library Management
 					1.2.3 Proceed to library module
 				1.3	If exit, terminate program
 		: Library module
-			1. Initialize options: Find Book(parent class), Favourites, History, Return Book, Log Out
+			1. Initialize options: Find Book(parent class), Favourites, History, Log Out
 				1.1 If Find Book, initialize options: Search by Name, Search by Genre
 					1.1.1 If Search by Name, prompt user for the book's name
 						1.1.1.1 If invalid name, go back to 1.1.1
