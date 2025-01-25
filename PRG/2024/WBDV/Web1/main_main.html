@@ -1,4 +1,4 @@
-<!--
+    <!--
 
 HTML is defined as Hypertext Markup Language, and it is the foundation of every websites. In HTML, we have tags and elements. Tags are a pair of symbols contained in a pair of angle brackets, and these tags will contain contents for the web page. Elements are a combination of tags and contents; so if a tag has a content, it is called an element. There are many tags, and in every HTML document we must declare what type of HTML it is or what version:
 
@@ -55,7 +55,7 @@ The href is the attribute and is used to contain links for the anchor to be clic
     title="tooltip" - this is for tooltips when hovered to a button
 
 
---
+----------------------------------------------------------------------------------------
 Image
     You can import or display images using the tag,
     
@@ -72,6 +72,8 @@ Image
     have height included and not the width, the width will be automatically 
     adjusted, vice-versa. And with image sources, you can place them or 
     make them as hyperlinks using the a tag with or without attributes.
+
+----------------------------------------------------------------------------------------
 
 Audio
     You  can import or display the controls of an audio using the
@@ -98,6 +100,7 @@ Audio
     have this fallback is to use another source tag with either the 
     song in another extension or the same.
 
+----------------------------------------------------------------------------------------
 
 Video 
     
@@ -121,13 +124,14 @@ Video
     You can also make the video as hyperlink using the pair of 
     a tags.
 
+----------------------------------------------------------------------------------------
 
 Favicon
 
         A favicon is the icon in the head of your webpage. You
         can have a favicon by having the link tag,
 
-            <link rel="icon" type="image/icon" href="file_path">
+            <link rel="icon" type="image/png" href="file_path">
 
         This link tag, a self-closing tag (which are tags that
         does not have a pair), links your document to an external
@@ -136,9 +140,83 @@ Favicon
         the extension of your file, and then the href tag.
 
         Most modern web browsers accept exensions such as ico,
-        png, git, jpg, and svg. And the recommended dimensions
+        png, gif, jpg, and svg. And the recommended dimensions
         of the icon is typically 96px by 96px or 176px by 176px
         if you edit it.
+
+----------------------------------------------------------------------------------------
+
+Text Formatting
+
+        This is how we put special emphasis on texts or words.
+        These formats are enclosed within paragraph tags or
+        pre tags, and are tags themselves which needs a closing
+        tag. We have bold, italic, underline, deleted, big, small
+        subscript, superscript, monospace, and mark or highlight 
+        a text.
+
+    Syntax:
+
+        <b></b> - bold text
+        <i></i> - italic text
+        <u></u> - underlined text
+        <del></del> - deleted text or cross a line in  a word
+        <big></big> - big text
+        <small></small> - small text
+        <sub></sub> - subscript text
+        <sup></sup> - superscript text
+        <tt></tt> - monospace text
+        <mark></mark> - highlight text
+
+----------------------------------------------------------------------------------------
+
+Span and Div
+
+        Both span and div are used to group elements and style them with CSS, however 
+        their key differences lies on how they group elements. In a span, you can only
+        style elements that are at the same line as the span tags, making it an inline 
+        container; while div is a block container that groups multiple elements and
+        style them, and also div is short for division. And after the div element, you'll
+        have a new line while span does not.
+    Syntax:
+        <span></span>
+        <div></div>
+
+
+----------------------------------------------------------------------------------------
+
+Lists
+
+        A list is a way to group items or texts together. There are three lists in html,
+        unordered list, ordered list, and description list. These lists can be styled 
+        using CSS. The unordered lists and ordered lists has li or list items, which
+        in ul or unoredered lists are grouped within bullet points while ordered lists
+        follow a set of rules, which is sequencial, and that is grouped within numbers.
+        The description lists are terms with descriptions. They're enclosed within a
+        pair of dl tags, and dt for terms and dd for their definitions.
+
+    Syntax:
+        <ul></ul> - unordered list
+        <ol></ol> - ordered list
+        <dl></dl> - description list
+        <li></li> - list item
+        <dt></dt> - description term
+        <dd></dd> - description definition
+
+----------------------------------------------------------------------------------------
+
+Table
+
+        A table is a way for us to represent data. In html, we have a pair of table tags
+        for defining a table, and then tr for table rows, th for table headers, and then
+        td for table data. We also have attributes for these such as align and then if
+        center, right, or left.
+
+
+        
+
+
+
 
 
 
