@@ -1,0 +1,101 @@
+/*
+------------------------------------------------------------------------------------------
+
+    CSS Styling Techniques
+        Inline, internal, external
+
+            In inline, this is where we have the style attribute on an HTML tag; in inter
+            nal, this is where we style the HTML using a pair of style tag in the head; 
+            and for the external, this is where we have a separate CSS stylesheet, away
+            from the HTML module, making it reusable for other HTML modules if one so links them.
+
+        Syntax:
+            <body style=""></body> - inline
+            <style></style> - internal
+            style.css - external
+
+------------------------------------------------------------------------------------------
+    Linking a CSS file
+        To link a CSS file to adapt its stylesheet, we can use the link tag in the head,
+        and have attributes such as rel="stylesheet" to specify to the website what we're
+        linking, and then the href="style.css_path" to then reference the CSS file.
+    
+    Syntax:
+        <link rel="stylesheet" href="">
+
+------------------------------------------------------------------------------------------
+
+    Access elements from internal and external
+
+        To access the elements of an HTML file to style them with CSS interally or externally, we have three ways. If the tag does not have an ID, which means that all tags that are that tag is gonna be styled with CSS, we simply put the tag's name inside that style tag or externally, and then group the styles using the curly braces.
+        
+        If the tag do have an ID, we call them using the hashtag symbol, #, and then the
+        id name (i.e. #this_is_an_id). And then if we're using classes to group elements,
+        we can style them by accessing them through the dot operator (.class_name).
+        
+    Syntax:
+        internal:
+            <style>
+                body{}
+                #id{}
+                .class{}
+            </style>
+        external:
+            body{}
+            #id{}
+            .class{}
+------------------------------------------------------------------------------------------
+    Styles:
+
+        background-color: rgb(255,255,255), hsl(255, %, %), #fffff(hexadecimal value),
+                          name(e.g red)
+               - changes the background color
+        color: rgb(255,255,255), hsl(255, %, %), #fffff(hexadecimal value),
+                          name(e.g red)
+               - changes the font color
+        
+        fonts{
+            font-family: - this is where we input the font we want. Use quotation marks
+                           if the font name has a space.
+            font-size: - this can be 0em for percentage or by pixels.
+            font-weight: - this is for how the text is darkened
+            font-style: - this is for how the text is displayed, like normal or italic
+            color: rgb, hsl, name, hex-val
+            font face rule: this is used for locally importing fonts: 
+                @font-face{
+                    src= url(file_path_here)
+                    font-family: - if you want to change the name of the font
+                }
+            You can also import google APIs for fonts from google fonts.
+        }
+        display{
+            display: flex; - this is for flex container creation that every child of 
+                             a tag will become a its container element for control of alignment and position.
+        }
+                             
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

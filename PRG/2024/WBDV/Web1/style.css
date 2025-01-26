@@ -1,3 +1,22 @@
-.sample-form{
-    
+body{
+    background-color: #DA9C56;
+    background-image: url(https://www.1888goodwin.com/wp-content/uploads/2021/04/Driving-at-Night-Credit-iStock-sduben.jpg);
+}
+p{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    font-family: "Noto Sans",arial;
+    font-size:80px;
+    font-weight:1000;
+    font-style:oblique;
+    color: #BB7409;
+}
+audio{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:40vh;
+    background-image: #D78A00;
 }
