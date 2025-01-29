@@ -10,7 +10,21 @@ class user:
         self.character = character
         database.account.append(self)
         
+    def auth(username, password):
+        right_pass = False; right_user = False
+        for i in range(len(database.account)):
+            if right_pass == True and right_user == True:
+                break
+            if username == database.account[i].username:
+                right_user = True
+            if password == database.account[i].password:
+                right_pass = True
+        return True if right_pass == True and right_user == True else False
         
 admin = user("admin", "admin123")
+
+
+
+    
 
 
