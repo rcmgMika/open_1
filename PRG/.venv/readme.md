@@ -2,6 +2,8 @@
 
 World craft is an rpg word game wherein characters slay monsters inside a dungeon, have skills, and can be brought. This game has a shop where users can buy items, characters, and potions. Boss fights are unavoidable while mob fights are not.
 
+The story of this is that we have a player that is awaken in a cave, and then upon traveling the cave he finds the dragon, for which he must kill at the end of the game, but at the start the player gets wounded but the dragon spares him. The dragon then flew from the cave and into the clouds, leaving the player with a hint of revenge. The player must get stronger from the cave because when he leaves... After he goes out of the cave, he is baffled by a beautiful view of sunlight. And then there is the dragon waiting for him.
+
 ## Algorithm
 ### log in
 - Prompt user for log-in or sign-in
@@ -54,14 +56,14 @@ class user:
     def __init__(self, user, password):
         self.user = user
         self.password = password
-        database.account.add(user)
+        database.account.add(self)
 
     character instance(race: Barbarian, Priest, Robin, Berserker)
 
 
 # config.py
-class character extends user:
-    def __init__(self, attack_val, defense_val, health_val, race, level, character_name, alive):
+class character:
+    def __init__(self, attack_val, defense_val, health_val, race, level, character_name):
         self.attack = 3 * (defense_val * 2.25)
         self.defense = 2.5 * (defense_val * 2.25)
         self.health = 4 * (defense_val * 2.25)
@@ -77,10 +79,10 @@ class character extends user:
         user.defense_value -= (user.defense_val * 1/4)
 
 
-#   story.py
+# story.py
 class dungeon:
-    def story_1():
-        act_1 = []
+    def __init__(self):
+        self.act_1 = ["You woken up with chills down your spine.", "You wonder what might have happened...", "After scanning the surroundings you saw a dragon, with scales as hard as mountains and its figure the same.", "The dragon then fights!"]
 
 
 ```

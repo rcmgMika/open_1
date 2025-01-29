@@ -1,7 +1,7 @@
 class person:
     access_this = 266 #THIS IS A STATIC VARIABLE/ATTRIBUTE! IT IS SHARED AMONG ALL INSTANCES WTF
     
-    def if_existing(self, value):#self is used to initialize and access the attributes and methods of instances. Super() or super method is used to access the methods of the parent class. And to access the attributes created by the self, one must first call the function it belongs to and then access it, except for constructors as they are already called when an instance is created.
+    def if_existing(self, value):#self is used to initialize and access the attributes and methods of instances. Super() or super method is used to access the methods of the parent class. And to access the attributes created by the self, one must first call the function it belongs to and then access it, except for constructors as they are already called when an instance is created. The self is the instance object itself, and that is why it can create attributes that belong to that instance only.
         self.value = 255
         value = 255
         return self.value
