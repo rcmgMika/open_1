@@ -1,6 +1,6 @@
 
 class character:
-    def __init__(self, race, level, character_name, character_type=None, status="Alive"):
+    def __init__(self, race="Human", level=1, character_name=None, character_type=None, status="Alive"):
        self.attack = 3 * (level * 2.25) 
        self.defense = 2.5 * (level * 2.25)
        self.health = 4 * (level * 2.25) 
@@ -33,7 +33,7 @@ class character:
            self.character_type,
            self.status
        ]
-       
+        
        
     # player actions
     def atk_enemy(self, user, user_enemy):
