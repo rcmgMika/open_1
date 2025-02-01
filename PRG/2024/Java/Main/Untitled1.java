@@ -644,7 +644,7 @@ public class Untitled1{
          * Final Keyword
          * 
          *      The final keyword in Java is the equivalent of const or constant in C.
-         *  And there is no const keyword in Java, and instead you have a static finaL
+         *  And there is no const keyword in Java, and instead you have a static final
          *  to ensure that it cannot be changed all throughout the program and that it
          *  belongs to that class only. 
          * 
@@ -781,6 +781,59 @@ public class Untitled1{
          * 
          * 
          * 
+         * *--------------------------------------------------------------------------------
+         * 
+         *  This and Super keyword
+         * 
+         *      The this keyword refers or accesses the current class the user intends to 
+         *  change or the child class if there is inheritance. While the super keyword 
+         *  and method refers to or accesses the superclass or the parent class of an 
+         *  inheritance. It can access the parent class' fields or attributes, methods, 
+         *  and the constructor.
+         * 
+         *      Syntax:
+         * 
+         *          this.class_attributes/methods/constructor
+         * 
+         *          super(arguments) - used for constructor passing  
+         *          super - used for accessing methods and fields
+         * 
+         * 
+         *--------------------------------------------------------------------------------
+         * 
+         *  Abstract keyword
+         * 
+         *      This makes a class, assumed to be parent, unable to be instantiated or 
+         *  make an object from, making its attributes and method unable to be accessed 
+         *  to add security. You can access it, however, by making it a parent class with
+         *  inheritance. We also have abstract methods, wherein a function will not have
+         *  a body and will be forced to be overridden later on to the child class. And
+         *  abstract methods are only implemented within an abstract class.
+         * 
+         *      Syntax:
+         * 
+         *          abstract class Main; - abstract class
+         *          abstract void func(); - abstract method
+         * 
+         * 
+         *-------------------------------------------------------------------------------
+         * 
+         *  Access Modifiers
+         * 
+         *      Access modifiers are modifications for instructions or code whether that 
+         *  code can be accessed by a class, module, or package. We have four access 
+         *  modifiers: Public, Protected, Package-Private, and Private. 
+         * 
+         *      1. The public can be accessed through any package and within itself.
+         *      2. The protected can be accessed within the same package with or 
+         *          without inheritance, and can only be accessed outside its package if 
+         *          the class is a subclass of the class that has the protected 
+         *          modifier.
+         *      3. The package-private or default or no-access modifier can only be 
+         *          accessed within the same package.
+         *      4. The private can only be accessed within the same class, and not of any
+         *          class or anywhere in the same module and cannot be accessed by the 
+         *          same package and outside.
          * 
          * 
          * 
@@ -795,6 +848,9 @@ public class Untitled1{
          * 
          * 
          * 
+         * 
+         * 
+
          * 
          */
 

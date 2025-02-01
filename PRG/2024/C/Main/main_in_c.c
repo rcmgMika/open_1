@@ -1,41 +1,18 @@
-    #include <stdio.h> //input and output
-#include <stdlib.h> //library
+#include <stdio.h>   //input and output
+#include <stdlib.h>  //library
 #include <stdbool.h> //boolean
-#include <math.h> //math functions
-#include <string.h> //string related functions
-#include <ctype.h> // character type for string functions, similar to python in .capitalize(you know this!)
-#include <time.h> //for the seed random number generator and random function
-#include <unistd.h> //for sleep and usleep for standard second and millisecond
+#include <math.h>    //math functions
+#include <string.h>  //string related functions
+#include <ctype.h>   // character type for string functions, similar to python in .capitalize(you know this!)
+#include <time.h>    //for the seed random number generator and random function
+#include <unistd.h>  //for sleep and usleep for standard second and millisecond
 #include <windows.h> //for sleep and usleep for sleep accepting millisecond and for usleep accepting nanoseconds
-#include <stddef.h>//for various macros sucha as size_t which is an unsigned long long int, NULL, and etc
+#include <stddef.h>  //for various macros sucha as size_t which is an unsigned long long int, NULL, and etc
 
 //---------------------------------------------------
-            //--Rules in programming or logic
-            //1. Placement of code matters
-            //2. Random outputs often is caused by referencing a non-existent value or a wrong operation 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//--Rules in programming or logic
+// 1. Placement of code matters
+// 2. Random outputs often is caused by referencing a non-existent value or a wrong operation
 
 /*int main(){
     printf("TEST THIS IS FOR CMD");
@@ -83,18 +60,18 @@ Will get back to this when I know more about the syntax of functions in C, this 
 
 */
 
-    //Different data types
+// Different data types
 
 //    float Jay = 0.399090; // 4 bytes (32 bits of precision = 6 - 7 digits) %f
 //  double Jay2 = 3.100000000000000000000; // 8 bytes (64 bits of precision = 15 - 16 digits) %lf
-    //in print float and doubles, if you want to have more digits displayed on the terminal, you must put the number
-    //of decimals that you want into the print statement before the format specifier letter/symbol
-    //(I.e printf("%0.99f"); - this will print 99 decimals, but note that the precision will be lacked.
+// in print float and doubles, if you want to have more digits displayed on the terminal, you must put the number
+// of decimals that you want into the print statement before the format specifier letter/symbol
+//(I.e printf("%0.99f"); - this will print 99 decimals, but note that the precision will be lacked.
 
-    // in 
-    //you must have #include <stdbool.h> first and then the true or false values are converted into binary,
-    //which means 0 is false and 1 is true
-    //in conditions, a variable name can be put rather than comparing it with equal sign or logical operators.
+// in
+// you must have #include <stdbool.h> first and then the true or false values are converted into binary,
+// which means 0 is false and 1 is true
+// in conditions, a variable name can be put rather than comparing it with equal sign or logical operators.
 /*
     bool Jay3 = false; //1 byte of information. %d
     // can either be 0(false) or 1 (true)
@@ -115,7 +92,7 @@ Will get back to this when I know more about the syntax of functions in C, this 
 */
 
 // FORMAT SPECIFIER - Define and format a type of code to be displayed
-/* 
+/*
     %d: Ints, fchar
     %c: character
     %s: (string) array of character
@@ -132,13 +109,13 @@ Will get back to this when I know more about the syntax of functions in C, this 
     %.1 - Decimal Precision
     %1. - Define the width
     %-:left allign
- */   
+ */
 /* CONSTANTS - A value that cannot be changed, useful when defining variables as we can define same variables
 with different values and have logic errors. Also, capitalize all your variable name as it is common practice,
 but not necessarily needed.
 
-To make a variable, although not necessarily variables only, you need to add a constant statement before the main 
-variable: 
+To make a variable, although not necessarily variables only, you need to add a constant statement before the main
+variable:
     "const (variable name());"
 
 */
@@ -151,16 +128,16 @@ variable:
     %: modulo/modulus for remainders
     ++: increment(add base 1)
     --: decrement(minus base 1)
-**note that in division, you must define a varible or type cast a variable to become a float or a double 
-**as quotients can have decimals. 
+**note that in division, you must define a varible or type cast a variable to become a float or a double
+**as quotients can have decimals.
 **also, you can have operations inside the print statement
     int i = 0;
     printf("I = %d", i = i + 10 - 5 or i+10-5)
 */
 
-//Escape Sequences - precedes or follows by "\" and can be combined with letters
-// \n - newline
-// \t - tab(space)
+// Escape Sequences - precedes or follows by "\" and can be combined with letters
+//  \n - newline
+//  \t - tab(space)
 
 /* AUGMENTED ASSIGNMENT OPERATOR - used to replace a statement inside a varible by getting that variable and then
 assigning a result to it to return to the variable
@@ -170,13 +147,13 @@ assigning a result to it to return to the variable
 ** this is a shortcut and is similar to increment and decrement, although you can use all the operators.
 */
 /* USER INPUT
-To input something into the terminal we'll need to either use the scanf(format_specifier, variable_name then precede 
+To input something into the terminal we'll need to either use the scanf(format_specifier, variable_name then precede
 with address of operator) statement for no whitespaces, and the function
 fgets(variable_name, size_bytes, stdin(standard input)). And the fgets function will have a newline escape sequence so to stop
 that, we'll need to #include <string.h> and then follow thne fgets function with:
                     variable_name[strlen(variable_name)-1] = '\0'
 
-IMPORTANT: Input buffer refers to the spaces or characters that is attained from the before user input function, and the after user input reads that and makes that 
+IMPORTANT: Input buffer refers to the spaces or characters that is attained from the before user input function, and the after user input reads that and makes that
 its input. To preent this, we need to precede our "after user input" with another scanf or just put a space preceding the format specifier in our user input.
 
 Also note that the order of inputs relates to the lines of the scanf/fgets and printf, just like in Python
@@ -190,8 +167,8 @@ The math functions in C are simply operations, and not formulas.
 
     sqrt(number/ variable) - for getting the square root of a number
     pow (number/ variable, power) - for getting the power of numbers
-//the round functions can only be rounded in whole numbers, I do not know about the decimals 
-    round() - round down 
+//the round functions can only be rounded in whole numbers, I do not know about the decimals
+    round() - round down
     ceil() - round up
     fabs() - absolute round down
     log() - logarithms, although I do not know its base
@@ -200,10 +177,10 @@ The math functions in C are simply operations, and not formulas.
     sin() - sine
     cos() - cosine
     tan() - tangent
- 
-    
+
+
 */
-//A program that gets the circumference of a circle and its area
+// A program that gets the circumference of a circle and its area
 /*
 const double PI = 3.14;
 double radius;
@@ -219,15 +196,15 @@ double circumference = 2 * PI * radius;
     printf("Circumference: %lf\n", circumference);
     printf("Area: %lf", area);
 
-//Lesson here: The flow or placement of your lines of code matters. I noticed this because when I initialized the area and circumference 
+//Lesson here: The flow or placement of your lines of code matters. I noticed this because when I initialized the area and circumference
 //I placed them before the input for radius and it resulted in zero. But when I placed them after the input for radius,
-//only then that they worked. Also when initializing the area and circumference, when Bro Code wrote his code that 
+//only then that they worked. Also when initializing the area and circumference, when Bro Code wrote his code that
 //the area and circumference are lated in the line be initialized, I got curious because that's what I do when I write my
 //result variables and thought will it be possible to initialize them in one line of code rather than with two lines?
 //IT WORKED! They can be initialized with one line of code, but keep in mind that the placement of your code matters in each line.
 */
 
-//Hypotenuse Solver Program = c^2 = a^2 + b^2 
+// Hypotenuse Solver Program = c^2 = a^2 + b^2
 /*
 
 int b;
@@ -247,7 +224,7 @@ int a;
     printf("%lf", hypotenuse);
 */
 
-//KASPERSKY thinks this code is a virus: This happened when creating the program for getting hypotenuse
+// KASPERSKY thinks this code is a virus: This happened when creating the program for getting hypotenuse
 /*
 int c;
 int a;
@@ -263,17 +240,17 @@ int a;
         printf("Output: %d\n", a);
 //the virus starts here, but you need the code above to make it work
 double hype = c - a;
-double sqrts = sqrt(hype);   
+double sqrts = sqrt(hype);
 
     printf("Output: %lf", sqrts);
 
 */
 
-//Conditional statements - these statements are boolean, in which you'll give a condition to every 
-//conditional statement except the else statement, although the else statement also has a condition
-//in which it will execute its given code if the statements above such as if and else if are false.
-//also you can create as many else if statements as you want! Makes me wonder what use is the switch
-//statements
+// Conditional statements - these statements are boolean, in which you'll give a condition to every
+// conditional statement except the else statement, although the else statement also has a condition
+// in which it will execute its given code if the statements above such as if and else if are false.
+// also you can create as many else if statements as you want! Makes me wonder what use is the switch
+// statements
 /*
 
 int var1;
@@ -297,7 +274,7 @@ int var1;
 
 
     //there will be a warning: comparizon between pointer and integer when you put a "[]" and define its byte size
-    
+
 //creating if statements that when you input a condition that is not within its given condition
 //in which a value is asked and the user gives a letter, then the else statement will be executed.
     int var1;
@@ -330,25 +307,25 @@ int var1;
 //a letter in an integer. And also, I kept in mind my rule that code placing matters.
 */
 
-//SWITCH STATEMENTS - it is poor practice to use many else if statements, and so it is recommended to use switch 
-//statements as the alternative. This statement has a case instead, and that case will be tested for its equality
-//to the input value, kinda like conditions in if statements. It is also recommended to use break statements as
-//they exit out off a switch, meaning if you don't have a break statement, then a case without one will treat the
-//other cases after it as its executable outputs.
+// SWITCH STATEMENTS - it is poor practice to use many else if statements, and so it is recommended to use switch
+// statements as the alternative. This statement has a case instead, and that case will be tested for its equality
+// to the input value, kinda like conditions in if statements. It is also recommended to use break statements as
+// they exit out off a switch, meaning if you don't have a break statement, then a case without one will treat the
+// other cases after it as its executable outputs.
 
-            //sample
-      /*      
-                 switch(value_to_be_tested_by_the_cases){
-                    case 'value_user_input':
-                        printf();
-                        break;
-                    case 'value_user_input2':
-                        printf();
-                    default:
-                        printf();
-                 }
+// sample
+/*
+           switch(value_to_be_tested_by_the_cases){
+              case 'value_user_input':
+                  printf();
+                  break;
+              case 'value_user_input2':
+                  printf();
+              default:
+                  printf();
+           }
 
-    */
+*/
 /*
 int p;
 
@@ -356,7 +333,7 @@ int p;
     scanf("%d", &p);
 
         switch(p){
-            
+
             case 1:
                 printf("You are with high honors!");
                 break;
@@ -368,12 +345,11 @@ int p;
                 break;
         }
 */
-//NOTES FOR SWITCH STATEMENTS - The cases cannot be a multi character and cannot compare values such as what 
-//if statements do
-//also, you must state what type ofvariable like when you have a string you have quotation marks, in the cases.
+// NOTES FOR SWITCH STATEMENTS - The cases cannot be a multi character and cannot compare values such as what
+// if statements do
+// also, you must state what type ofvariable like when you have a string you have quotation marks, in the cases.
 
-
-//Weight unit converter: Testing conditional statements inside conditional statements
+// Weight unit converter: Testing conditional statements inside conditional statements
 /*
 char unit;
 float weight;
@@ -410,17 +386,17 @@ char error; //undetifier: this is for when a user inputs a letter instead of the
             printf("Incorect input");
         }
 */
-//Switch statements cannot accept multi-character values, but the other if/else if/else can
-//also, you can add conditional statements inside conditional statements
+// Switch statements cannot accept multi-character values, but the other if/else if/else can
+// also, you can add conditional statements inside conditional statements
 
-//CALCULATOR with 4 standard and modulo
+// CALCULATOR with 4 standard and modulo
 /*
 char oprt;
 double n1;
 double n2;
 double result;
 
-    
+
     printf("Input number: ");
     scanf("%lf", &n1);
     printf("\n\nChoose operation: (+ - * / %): ");
@@ -455,19 +431,18 @@ double result;
         }
 */
 
+// Logical Operators
 
-//Logical Operators
+// 1. AND (&&) - This LO checks if two or more conditions are true; they add conditions into conditional statements
+// and as there are two or more conditions, it needs all to be true or met to be able to execute the statement.
+// 2. OR (||) - TWO VERTICAL BARS This checks if at least one condition is true and will run it if one condition
+// is indeed true.
+// 3. NOT (!) - Reverses the state of conditions or as the word suggest "NOT" so it is a condition wherein
+// a given condition will run if the condition is "not" the value. Precede a bool when you want to run the condition
+// if its false rather than true("reverses the state of conditions"), or you can combine it by following the variable
+// and combining it with symbols such as = --> != and this tells us "not equal to"
 
-//1. AND (&&) - This LO checks if two or more conditions are true; they add conditions into conditional statements
-//and as there are two or more conditions, it needs all to be true or met to be able to execute the statement.
-//2. OR (||) - TWO VERTICAL BARS This checks if at least one condition is true and will run it if one condition 
-//is indeed true.
-//3. NOT (!) - Reverses the state of conditions or as the word suggest "NOT" so it is a condition wherein
-//a given condition will run if the condition is "not" the value. Precede a bool when you want to run the condition
-//if its false rather than true("reverses the state of conditions"), or you can combine it by following the variable
-//and combining it with symbols such as = --> != and this tells us "not equal to"
-
-//AND 
+// AND
 /*
 int age = 12;
 
@@ -481,7 +456,7 @@ int age = 12;
         printf("You either have not been born yet or a child!");
     }
 */
-//OR
+// OR
 /*
 int age = 18;
 
@@ -494,7 +469,7 @@ int age = 18;
         printf("You are a child");
     }
 */
-//NOT
+// NOT
 /*
 int age = 0;
 
@@ -504,25 +479,25 @@ int age = 0;
     }
     else if (age != 18){//is not equal
         printf("You are not legalllll!");
-    }  
+    }
 */
 
-//Functions - You can actually create a function outside the main function, in which i'll guess too that 
-//you can create functions inside the main function. We use the void function_name(parameter){} to create our own function.
-//This is useful when having a code that repeats itself or just use loops, and to create our own formulas or code
-//Invoking or calling is the operation name when we reference or run a function. To call a function, we must put 
-//the function's name and its set of parenthesis and inside those parenthesis are arguments and parameters. The
-//difference of the two is that parameters are inside the main function and tells you that it needs that to run
-//that function. An argument is a variable that is dynamic and will give the value to the parameter by calling 
-//or invoking the function.
+// Functions - You can actually create a function outside the main function, in which i'll guess too that
+// you can create functions inside the main function. We use the void function_name(parameter){} to create our own function.
+// This is useful when having a code that repeats itself or just use loops, and to create our own formulas or code
+// Invoking or calling is the operation name when we reference or run a function. To call a function, we must put
+// the function's name and its set of parenthesis and inside those parenthesis are arguments and parameters. The
+// difference of the two is that parameters are inside the main function and tells you that it needs that to run
+// that function. An argument is a variable that is dynamic and will give the value to the parameter by calling
+// or invoking the function.
 
-//notes___________________________
-//functions cannot see the insides of another function so we must either call it or invoke it
-//Creating a function to square numbers with user input
-//in calling void functions, you'll need to have a print statement to return something with no resulting variable
-//i.e sqrt(x)
-//in calling return functions, you must have a resulting variable in order to print that output from the return function
-//i.e double result = sqrt(result)
+// notes___________________________
+// functions cannot see the insides of another function so we must either call it or invoke it
+// Creating a function to square numbers with user input
+// in calling void functions, you'll need to have a print statement to return something with no resulting variable
+// i.e sqrt(x)
+// in calling return functions, you must have a resulting variable in order to print that output from the return function
+// i.e double result = sqrt(result)
 
 /*
 int x2(int x)//you can also rename the variable name of the other functions as long as you follow the order of argument
@@ -543,11 +518,10 @@ int var1;
 }
 */
 
-
-//Ternary Operator  Shortcut to if/else statements and are written as (condition) ? value_if_true : value_if_false
-//you can also use the logic operators to add more conditions into ternary operators
-//you cal also add executables in "value_if_true" by placing a comma and then writing the code that you want to
-//execute along with that statement
+// Ternary Operator  Shortcut to if/else statements and are written as (condition) ? value_if_true : value_if_false
+// you can also use the logic operators to add more conditions into ternary operators
+// you cal also add executables in "value_if_true" by placing a comma and then writing the code that you want to
+// execute along with that statement
 /* Creating a max number function
 int max(int x, int y)
 {
@@ -566,15 +540,14 @@ int n2;
 }
 */
 
-//See in project1.c, in Project# 9, the use of all my knowledge from this point before
+// See in project1.c, in Project# 9, the use of all my knowledge from this point before
 
-
-//Function Protoypes - This ensures that a function call with an incomplete matching parameter from argument is not executed,
-//as most C compilers still run function calls with incomplete argument and results in random outputs. This also makes the 
-//function be the first in line although not necessarily a law that you cannot have functions before 
-//the main if you have a prototype, but it is more convenient when made functions are placed before the main.
-//also this helps in debugging as you can know the error. To make the function prototype, you only need to copy the function, 
-//without its body and instead write at the end a semicolon instead of a set of brackets.
+// Function Protoypes - This ensures that a function call with an incomplete matching parameter from argument is not executed,
+// as most C compilers still run function calls with incomplete argument and results in random outputs. This also makes the
+// function be the first in line although not necessarily a law that you cannot have functions before
+// the main if you have a prototype, but it is more convenient when made functions are placed before the main.
+// also this helps in debugging as you can know the error. To make the function prototype, you only need to copy the function,
+// without its body and instead write at the end a semicolon instead of a set of brackets.
 /*
 void panget(char name[], int age);
 
@@ -587,7 +560,7 @@ int main()
 
     return 0;
 
-} 
+}
 
 void panget(char name[], int age)
 {
@@ -596,26 +569,25 @@ void panget(char name[], int age)
 }
 */
 
+// String functions - use first the string header file
 
-//String functions - use first the string header file
+// toupper - upper case char and not multi-character
+// strlwr - lowercase everything
+// strupr - uppercase evrything
+// strcat - add strings together
+// strncat - you can set how many you want to include by ", number"
+// strcpy - replaces and copies the second string into the first string
+// strncpy - you can set how many you want to copy by ", number", the replacement always start at the first
 
-//toupper - upper case char and not multi-character
-//strlwr - lowercase everything
-//strupr - uppercase evrything
-//strcat - add strings together   
-//strncat - you can set how many you want to include by ", number"
-//strcpy - replaces and copies the second string into the first string
-//strncpy - you can set how many you want to copy by ", number", the replacement always start at the first
+// strset - sets all the string into a certain character(not multi)
+// strnset - choose which character and the lenght(it starts at the first): strnset(variable, 'x', 2)
+// strrev - reverses the string
 
-//strset - sets all the string into a certain character(not multi)
-//strnset - choose which character and the lenght(it starts at the first): strnset(variable, 'x', 2)
-//strrev - reverses the string
-
-//strlen - finds the lenght of the string
-//strcmp - compares strings if they are the same - boolean although reverse(true = 0, false = 1) or !(not), but you can change it into the boolean true(1) or false(0)
-//strncmp - compares the given letter inside a string
-//strcmpi - - same as cmp but ignores upr/lwr cases
-//strnicmp - same as ncmp but ignores upr/lwr cases
+// strlen - finds the lenght of the string
+// strcmp - compares strings if they are the same - boolean although reverse(true = 0, false = 1) or !(not), but you can change it into the boolean true(1) or false(0)
+// strncmp - compares the given letter inside a string
+// strcmpi - - same as cmp but ignores upr/lwr cases
+// strnicmp - same as ncmp but ignores upr/lwr cases
 /*
 char tB(int y);
 int main()
@@ -640,17 +612,16 @@ char tB(int y)
     }
 }
 */
-//in short, not regarding "n" to specify the choice and "i" to ignore cases, 
-//we have upper/lowerc case, concatenate, copy, set, reverse, lenght, compare
+// in short, not regarding "n" to specify the choice and "i" to ignore cases,
+// we have upper/lowerc case, concatenate, copy, set, reverse, lenght, compare
 
-
-//Loops 
-//note - infinite loops that causes no error or intentional infnite loops are made from conditions not being met
-//note - infinite loops that causes errors are made from conditions already met
-//1. for loops - repeat a section of code with a set of amount of times
-//sample writing: for(index_or_counter; _condition(<>=);increment_decrement_AAO)
-//note that the (<>) are the ones that will make the condition work as the define the value and then the equal presents the limit in which
-//the condition or program will run. 
+// Loops
+// note - infinite loops that causes no error or intentional infnite loops are made from conditions not being met
+// note - infinite loops that causes errors are made from conditions already met
+// 1. for loops - repeat a section of code with a set of amount of times
+// sample writing: for(index_or_counter; _condition(<>=);increment_decrement_AAO)
+// note that the (<>) are the ones that will make the condition work as the define the value and then the equal presents the limit in which
+// the condition or program will run.
 /*
                     int main()
                     {
@@ -660,10 +631,10 @@ char tB(int y)
                         }
                     }
 */
-//2. while loops - repeat a section of code if the condition is still true or until it is proven false; this may run idefinitely or infinitely
-//or will not run at all if the condition is already met or there is problem in your code with logic
+// 2. while loops - repeat a section of code if the condition is still true or until it is proven false; this may run idefinitely or infinitely
+// or will not run at all if the condition is already met or there is problem in your code with logic
 
-//1. prompt user if he is a kupal
+// 1. prompt user if he is a kupal
 /*
                 int main()
                 {
@@ -687,9 +658,9 @@ char tB(int y)
                         return 0;
                 }
 */
-//do while loop - absolutely executes the program inside it and then checks if the condition is still true, contrary to while loops that    
-//checks the condition first
-//do while loop summation
+// do while loop - absolutely executes the program inside it and then checks if the condition is still true, contrary to while loops that
+// checks the condition first
+// do while loop summation
 /*
     int main()
     {
@@ -711,12 +682,12 @@ char tB(int y)
 
     }
 */
-//name concatenation in do while loops
-//i'll now include strlen for me to not rely on for loops inside and just to while loops
+// name concatenation in do while loops
+// i'll now include strlen for me to not rely on for loops inside and just to while loops
 /* STILL IN PROGRESS
 int main()
 {
-    char name[25]; 
+    char name[25];
     char sum[64];
     int iteration;
     int x = 0;
@@ -738,11 +709,9 @@ int main()
 }
 */
 
-
-
-//Nested loop - a loop inside a loop
+// Nested loop - a loop inside a loop
 /*
-    The loop inside the loop is forced to carry out all it's condition(i.e of the inner for loop is required to run 4 times, then it 
+    The loop inside the loop is forced to carry out all it's condition(i.e of the inner for loop is required to run 4 times, then it
     will run 4 times first before the outer loop begins it's another cycle)
 
         for(int i=0; i<2; i++){ will run 1 time
@@ -754,9 +723,9 @@ int main()
         outer loop(1 time) -> inner loop(4 times) -> cycle end -> go back to outer loop
 
     Also, the outer loop or any for loop will not make the next line of codes after it to be run unless the for loop is done with
-    it's condition        
+    it's condition
 */
-//rectangle maker
+// rectangle maker
 /*
 int main()
 {
@@ -772,8 +741,8 @@ int main()
 
     printf("Input # of columns: ");
     scanf("%d", &columns);
-    
-    //scanf("%c"); //this clears the input buffer because when we enter our input in scanf they include newline and the next scanf reads that 
+
+    //scanf("%c"); //this clears the input buffer because when we enter our input in scanf they include newline and the next scanf reads that
     fgets(mae, 43, stdin);
 
     printf("Input symbol: ");
@@ -790,13 +759,11 @@ int main()
 }
 */
 
+// continue and break statements in loops
+// 1. Continue - this skips a section/process/output/code of an iteration or loop
+// 2. Break - this break the statement and exits out; used in such as switch statements
 
-
-//continue and break statements in loops
-//1. Continue - this skips a section/process/output/code of an iteration or loop
-//2. Break - this break the statement and exits out; used in such as switch statements 
-
-//Counting forward that skips the half and breaks at the half of that half
+// Counting forward that skips the half and breaks at the half of that half
 /*
 int half(int x);
 
@@ -824,7 +791,7 @@ int iteration;
                 break;
             }
              printf("%d\n", i);
-            
+
         }
     return 0;
 }
@@ -853,10 +820,10 @@ char array[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
 }
 */
 
-//Array - A data structure that is finite in space that can store the same data types, and array decays into pointer or memory addresses as
-//it only acts as a box for the address of specific related data types
-//in initialize an array, it is like when writing an array of characters using the [] followed by curly braces a
-//of which that will be where elements will be placed and their index locations
+// Array - A data structure that is finite in space that can store the same data types, and array decays into pointer or memory addresses as
+// it only acts as a box for the address of specific related data types
+// in initialize an array, it is like when writing an array of characters using the [] followed by curly braces a
+// of which that will be where elements will be placed and their index locations
 /*
     in intializing an array,
     data_type name[no. of elements] = {list};
@@ -877,22 +844,22 @@ char array[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
 /*
     Also, in making an array function parameter, you need to know that in the argument, the first element of the array is the
     only thing that is included. And so you need to also include the size of that array because when you read the array's byte
-    size in that function, you'll only get the size of the first element and not the whole. 
+    size in that function, you'll only get the size of the first element and not the whole.
 */
 
-//and you can initialize an array in 3 ways, 
-//int age[] = {12, 90, 23, 54, 90} this array has not yet initialized its size or space
-//int age[4] = {12, 90, 23, 54, 90} this array has not yet initialized its size or space
-//int age[];
-//age[0] = {12} - the value inside the straight bracket is the index location and not the size of the array
-//age[1] = {90}
+// and you can initialize an array in 3 ways,
+// int age[] = {12, 90, 23, 54, 90} this array has not yet initialized its size or space
+// int age[4] = {12, 90, 23, 54, 90} this array has not yet initialized its size or space
+// int age[];
+// age[0] = {12} - the value inside the straight bracket is the index location and not the size of the array
+// age[1] = {90}
 //...
-//once you compile an array, you cannot change it anymore unless you go back to the start and remove that array and create again
-//i.e double prices[] = {index0, index1, index2, index3}; and in referencing an array, for example in print statement,
-//we just need to put the index location inside the print statement's address like this
-//double prices[] = {index0, index1, index2, index3}; printf("%lf", prices[0, 1, 2]);
+// once you compile an array, you cannot change it anymore unless you go back to the start and remove that array and create again
+// i.e double prices[] = {index0, index1, index2, index3}; and in referencing an array, for example in print statement,
+// we just need to put the index location inside the print statement's address like this
+// double prices[] = {index0, index1, index2, index3}; printf("%lf", prices[0, 1, 2]);
 
-//initializing an array with for loops
+// initializing an array with for loops
 /*
 int main()
 {
@@ -914,10 +881,10 @@ int number = -1;
 }
 */
 
-//the above calculation of the number of array is too messy and more code. So we'll use the function "sizeof(array)" to display 
-//the total byte of the variable and then devide by the byte of that variable to always update, as I have done in the variable way,
-//the number of iterations in that for loop
-//so i'll make the code above much more cleaner with this:
+// the above calculation of the number of array is too messy and more code. So we'll use the function "sizeof(array)" to display
+// the total byte of the variable and then devide by the byte of that variable to always update, as I have done in the variable way,
+// the number of iterations in that for loop
+// so i'll make the code above much more cleaner with this:
 /*
 int main()
 {
@@ -932,15 +899,15 @@ int main()
 }
 */
 
-//2D array - essentially an array inside of an array, in which this 2d array will act as the row and the inside array will be the column, however they still have
-//there own row and column. The inside an array will be elements, and this is useful in creating matrices, grids, and table of data
-//in declaring a 2D array, we just need to have two straight brackets and the first bracket will be the 2D array and the last bracket will be the inside element of that
-//array
+// 2D array - essentially an array inside of an array, in which this 2d array will act as the row and the inside array will be the column, however they still have
+// there own row and column. The inside an array will be elements, and this is useful in creating matrices, grids, and table of data
+// in declaring a 2D array, we just need to have two straight brackets and the first bracket will be the 2D array and the last bracket will be the inside element of that
+// array
 
-//note in referencing an array
-//in print statements or any input, you'll reference using the index location
-//in initializing an array, you'll reference using index location
-//in declaring an array, you'll write the size of the array and not its indedx location
+// note in referencing an array
+// in print statements or any input, you'll reference using the index location
+// in initializing an array, you'll reference using index location
+// in declaring an array, you'll write the size of the array and not its indedx location
 
 /*
 int arr[] = {1, 2 , 3};
@@ -960,15 +927,14 @@ we can place the elements however we want
 
 */
 
-
-//first method of declaration and initialization
+// first method of declaration and initialization
 /*
 int main()
 {
 
-int age[3][3] = {{97, 83, 63}, 
-                {24, 27, 29},  
-                {19, 17, 18}}; 
+int age[3][3] = {{97, 83, 63},
+                {24, 27, 29},
+                {19, 17, 18}};
 
     for(int i = 0; i < sizeof(age)/sizeof(age[0]); i++) //referenced the index location of the 2d array
     {
@@ -980,7 +946,7 @@ int age[3][3] = {{97, 83, 63},
     }
 }
 */
-//second method of declaration and initialization 
+// second method of declaration and initialization
 /*
 int main()
 {
@@ -1037,15 +1003,14 @@ height[3][9] = 100;
     }
 }
 */
-//Initializing an char array later
+// Initializing an char array later
 /*
 char abcd[64];
 strcpy(abcd, "A");
 printf("%c\n", abcd[0]);
 */
 
-
-//2D array with strings(linear)
+// 2D array with strings(linear)
 /*
 int main()
 {
@@ -1058,20 +1023,17 @@ strcpy(name[1], "Pogi");
     }
 }
 */
-//as you can see, this 2D array is not a 2 dimensional array that has both rows and columns, and instead it is only linear of x in the cartesian plane
-//why? because when we initialize an array of character, we can only put 1 string into it compared to when we have an array of integer that we can 
-//already put many integer into it as long as it remains as columns. And thus this 2D array of string is linear.
+// as you can see, this 2D array is not a 2 dimensional array that has both rows and columns, and instead it is only linear of x in the cartesian plane
+// why? because when we initialize an array of character, we can only put 1 string into it compared to when we have an array of integer that we can
+// already put many integer into it as long as it remains as columns. And thus this 2D array of string is linear.
 
-
-
-
-//Swap two values of variables
-//to swap values, we cannot reference two variables to each other because the value of that two variable will be the same, and instead we can think of another solution that is 
-//either another variable or the string copy function; although the string copy function is the only one that works with strings, but the another variable method works
-//with all the data types except string because we don't have strings in C and we are referencing an array and changing its value. And as the above code used the strcpy function
-//it is what we'll use too to swap the values of an array of character. 
-//note: also in swapping the values in strings, we need to declare its size in order to not have error in string copy function because we cannot copy a string into a 
-//less word string
+// Swap two values of variables
+// to swap values, we cannot reference two variables to each other because the value of that two variable will be the same, and instead we can think of another solution that is
+// either another variable or the string copy function; although the string copy function is the only one that works with strings, but the another variable method works
+// with all the data types except string because we don't have strings in C and we are referencing an array and changing its value. And as the above code used the strcpy function
+// it is what we'll use too to swap the values of an array of character.
+// note: also in swapping the values in strings, we need to declare its size in order to not have error in string copy function because we cannot copy a string into a
+// less word string
 /*
 int main()
 {
@@ -1101,8 +1063,7 @@ int main()
 }
 */
 
-
-//Sorting an array
+// Sorting an array
 /*
 void sort(int arrayRandom[], int size);
 void printArray(int arrayRandom[], int size);
@@ -1157,7 +1118,7 @@ if(arrayRandom[8] > arrayRandom[8+1])//this is actually the reason because we ca
                 arrayRandom[j] = arrayRandom[j+1];
                 arrayRandom[j+1] = temp;
 
-output: 
+output:
 0>1 = 1
 1>2 = 2
 2>3 = 3
@@ -1184,30 +1145,27 @@ Output size: 9
 8
 */
 
-//Seed random number generator(srand) and random function(rand)
-//What this do is that the srand function gets a random seed or number and then the rand function will get the seed and produce another random number and returns
-//that output to the seed, and the cycle goes on
-//To write:
-//srand(time(NULL)) - the time and null means that the srand will produce the seed with the current time to ensure different shuffles each run or different outputs each run
-//variable_name = rand() % (variable name + 1) - the % (variable_name/value + 1) here picks a random index into the array. The modulo symbol determines the specific 
-//range/limit of the generator
+// Seed random number generator(srand) and random function(rand)
+// What this do is that the srand function gets a random seed or number and then the rand function will get the seed and produce another random number and returns
+// that output to the seed, and the cycle goes on
+// To write:
+// srand(time(NULL)) - the time and null means that the srand will produce the seed with the current time to ensure different shuffles each run or different outputs each run
+// variable_name = rand() % (variable name + 1) - the % (variable_name/value + 1) here picks a random index into the array. The modulo symbol determines the specific
+// range/limit of the generator
 
-
-
-
-//Structs 
-//structs are a collection of members, kind like a variable, in which it can store different data types, and is listed under one block of memory which is the
-//inside of that struct, and of which they can be referenced using a variable name. 
-//In writing a struct, you need: struct Tag_name. And in referencing it, we needto go into the main function because this is a separate function, and then
-//assign a variable name next to the tag name, of which we can access the "block of memory" inside it. 
-//It is similar to arrays in which it contains data of a "member" or the types of variables. This is actually a way to group many variables of different data types.
-//Putting values in that struct without the initialization or assigned variables, it is the same way as we initialize a variable later on. Like for example we use strcpy
-//to change the string of an array of character. We just need to reference the variable name because the tag name is just the list name. 
-//In referencing or assigning a variable into the struct, we just need to add a variable name to that struct. And it can contain many different variable names and have
-//different values inside that block of memory.
-//to access and assign a value to the block of memory, or specific variables inside that struct, we use the member access operator ".".
-//You cannot initialize the members of the struct unless directly in the main function. This is because no memory is alloted into the struct until it is initialized
-//in the main function.
+// Structs
+// structs are a collection of members, kind like a variable, in which it can store different data types, and is listed under one block of memory which is the
+// inside of that struct, and of which they can be referenced using a variable name.
+// In writing a struct, you need: struct Tag_name. And in referencing it, we needto go into the main function because this is a separate function, and then
+// assign a variable name next to the tag name, of which we can access the "block of memory" inside it.
+// It is similar to arrays in which it contains data of a "member" or the types of variables. This is actually a way to group many variables of different data types.
+// Putting values in that struct without the initialization or assigned variables, it is the same way as we initialize a variable later on. Like for example we use strcpy
+// to change the string of an array of character. We just need to reference the variable name because the tag name is just the list name.
+// In referencing or assigning a variable into the struct, we just need to add a variable name to that struct. And it can contain many different variable names and have
+// different values inside that block of memory.
+// to access and assign a value to the block of memory, or specific variables inside that struct, we use the member access operator ".".
+// You cannot initialize the members of the struct unless directly in the main function. This is because no memory is alloted into the struct until it is initialized
+// in the main function.
 /*
 //Declaring a struct
 struct tag_name
@@ -1223,10 +1181,9 @@ with strings you do the strcpy(tag_name.variable_name, "value")
 struct tag_name variable_name = {placement rule of in conding}
 */
 
-
-//Typedef - This is a function that provides a nickname or a shortcut that can be declared using that nickname. It is common to use these in structs as 
-//declaring them in the main function is a hassle to do. They are very similar to structs.
-//Declaring a typedef
+// Typedef - This is a function that provides a nickname or a shortcut that can be declared using that nickname. It is common to use these in structs as
+// declaring them in the main function is a hassle to do. They are very similar to structs.
+// Declaring a typedef
 /*
 typedef data_type(note that this is not the name of the variable) nickname;
 
@@ -1241,7 +1198,7 @@ typedef struct
 } user;
 
 int main()
-{   
+{
     user Robby;//declaring the struct
     Robby.age = 10;
     strcpy(Robby.name, "Robby Clifford");
@@ -1255,7 +1212,7 @@ int main()
     //can be initialized already
     //can be initialized with scanf
     //can be initialized later with strcpy because this is an array
-    strcpy(Name, "Robby"); 
+    strcpy(Name, "Robby");
     printf("%s", Name);
 
 
@@ -1265,10 +1222,9 @@ int main()
 
 */
 
-
-//Using the concept of array, structs, and typedef
+// Using the concept of array, structs, and typedef
 /*
-typedef struct 
+typedef struct
 {
     char name[64];
     int age;
@@ -1287,7 +1243,7 @@ int main()
     //if we don't have a typedef
     struct example kenn = {"Kenn Alonzo", 18};
     struct example ron = {"Ron Salen", 18};
-    struct example array2[] = {kenn, ron}; 
+    struct example array2[] = {kenn, ron};
 
     for(int i = 0; i < sizeof(array)/sizeof(array[0]); i++)
     {
@@ -1300,14 +1256,13 @@ int main()
 }
 */
 
+// Enum or enumeration - A user defined name for an integer, kinda like an array of characters. When declaring an enum, we start with the standard index value of 0,
+// however you can change that by equaling the integer name into a certain number. This enum function helps the user to make their code readable to other people
 
-//Enum or enumeration - A user defined name for an integer, kinda like an array of characters. When declaring an enum, we start with the standard index value of 0,
-//however you can change that by equaling the integer name into a certain number. This enum function helps the user to make their code readable to other people
-
-//to declare an enum and initialize:
-//     enum identifier_name{constant_variable_name !||= specified_value};
-//to declare and initialize in to the main function
-//     enum identifier_name variable_name = constant_variable_name;
+// to declare an enum and initialize:
+//      enum identifier_name{constant_variable_name !||= specified_value};
+// to declare and initialize in to the main function
+//      enum identifier_name variable_name = constant_variable_name;
 /*
 enum roman{I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000};
 
@@ -1331,7 +1286,7 @@ int main(){
 }
 
 */
-//Alphabets are numerically valued, a = 1, b = 2,...;
+// Alphabets are numerically valued, a = 1, b = 2,...;
 /*
 int main()
 {
@@ -1345,8 +1300,6 @@ int main()
     }
 }*/
 
-
-
 //-----------------Preprocessor Directives & Macros---------------------------------------------
 /*
     prepocessor directives are special instructions to the compiler that will execute before the compilation
@@ -1356,7 +1309,7 @@ int main()
         #include <header_file>
     2. #define - creates a macro or shortcut for code simplicity that has a symbolic name and a constant value or code snippet
         #define symbol_name value
-    3. #ifdef, #else, #endif, ifndef - These directives are used to debug code. They include blocks of code that can be excluded 
+    3. #ifdef, #else, #endif, ifndef - These directives are used to debug code. They include blocks of code that can be excluded
                                        or included, similar to conditional statements. This directive is designed to check
                                        if a code or define statement is included. This can be run only inside the main function
         #ifdef - behaves like an if statement
@@ -1368,7 +1321,7 @@ int main()
             int main(){
                 #ifdef macros
                     printf("Macro exists");
-                #else   
+                #else
                     printf("Macro doesn't exists");
                 #endif
 
@@ -1390,17 +1343,17 @@ int main()
 
 */
 //----------------Memory--------------------------------------------------------------
-    /*
-        Memory : This is a collection or an array of bytes within RAM
-        Memory Block :  This is a unit or a byte that and is used to hold a value
-        Memory Address : This is the address of the memory block through the RAM
-    */
+/*
+    Memory : This is a collection or an array of bytes within RAM
+    Memory Block :  This is a unit or a byte that and is used to hold a value
+    Memory Address : This is the address of the memory block through the RAM
+*/
 
 //----------------Pointers and Memory Management/Allocation----------------------------
 
-//Pointer - a pointer is a variable that stores the memory address of another variable; it does not store it's value
+// Pointer - a pointer is a variable that stores the memory address of another variable; it does not store it's value
 
-//a pointer does not save space, but rather the runtime. It makes code run faster.
+// a pointer does not save space, but rather the runtime. It makes code run faster.
 
 /* Initializing and declaration of pointers WITHOUT ARRAYS
 dereference = *, in which this acts kind of like a car that you will tell where to go to
@@ -1409,7 +1362,7 @@ address = &, this is the address of something
 
 declare and initialize
     int age = 18;
-    data_type* pvariable_name = &variable; - This is the initialization of the address 
+    data_type* pvariable_name = &variable; - This is the initialization of the address
 this tells us that "*" is the symbol to tell the system that we're making pointer
 the variable name varies, but common decency requires to add p first and then camelcase to the variable name of the pointed
 &variable tells us that the address of that certain variable is referenced
@@ -1466,7 +1419,7 @@ any limiter as you can use them in anything.
 Included from the C standard library & string functions, and this functions are jsut like the string functions
 
 
-1. memcmp - Compares two memory addresses, useful in comparing arrays. 
+1. memcmp - Compares two memory addresses, useful in comparing arrays.
 
 - memcmp returns 0 if true, 1 if false; just like in strcmp
 - in writing memcmp/syntax
@@ -1475,18 +1428,18 @@ Included from the C standard library & string functions, and this functions are 
 2. memcpy - changes the value of a byte
 
         - in writing memcpy/syntax
-            memcpy(void_pointer, void_pointer/&variable/memory_address, size of the void_pointer/how far we want the change to happen in 
+            memcpy(void_pointer, void_pointer/&variable/memory_address, size of the void_pointer/how far we want the change to happen in
                    in terms of bytes)
 
 --------------------Size of operators---------------------------------------------------------------------------------------------------
-        sizeof - gets the corresponding byte if data type(e.g sizeof(int)), but if a variable/array then it gets the 
-                 total number of elements it can hold. 
-        sizeof(void_pointer)/sizeof(void_pointer[index x] or sizeof(datatype)) - gets the corresponding no. of existing elements of an 
-                                                                                 array that its size is not initialized 
+        sizeof - gets the corresponding byte if data type(e.g sizeof(int)), but if a variable/array then it gets the
+                 total number of elements it can hold.
+        sizeof(void_pointer)/sizeof(void_pointer[index x] or sizeof(datatype)) - gets the corresponding no. of existing elements of an
+                                                                                 array that its size is not initialized
 
-        We cannot really know how many existing elements are there in an array if that array has a known size, but what we can do is 
-        iterate a scan to an array and include only the values that are not zero and then increment to another variable, as we know 
-        that every undeclared value of a given variable is given a value of zero. 
+        We cannot really know how many existing elements are there in an array if that array has a known size, but what we can do is
+        iterate a scan to an array and include only the values that are not zero and then increment to another variable, as we know
+        that every undeclared value of a given variable is given a value of zero.
             for(int i=0;i<sizeof(array)/sizeof(array[0]);i++){
                 if(array[i] != 0){
                     variable++
@@ -1542,7 +1495,7 @@ Included from the C standard library & string functions, and this functions are 
 4. memchr - checks if a value in byte exists.
 
 - Byte representation or hexadecimal representation varies from data type to data type
-        e.g integer has a byte representation of 0 0 0 0, and it has 4 zeroes because it's size is 4 and the 
+        e.g integer has a byte representation of 0 0 0 0, and it has 4 zeroes because it's size is 4 and the
             standard value of an undeclared variable is always 0
 - memchr either returns an address or NULL/0000...
 - In writing memchr/syntax
@@ -1567,14 +1520,13 @@ Included from the C standard library & string functions, and this functions are 
     return 0;
 */
 
-
 /* Printing Memory into the Console
     Each particular value has a hexidecimal representation. And in each symbol of hex is 4 bits. So the idea is to have a placeholder
     for 1 byte, in which case we'll use unsined char as it can have values of letters or decimals, and to use %02x for printing hex
     with both number and letter, or the %hhu in which it prints the value of an unsigned char. Also, the sizeof operator returns a byte
     in unsigned long long integer form, and so we'll use that too. You can also use the sizeof function for anything, even in enums and structs.
 
-typedef struct 
+typedef struct
 {
     int a;
     long int b;
@@ -1600,7 +1552,7 @@ int main(){
                 printf("\n");
             }
             data = *(((unsigned char*)&akim) + i);
-            //This behaves just like printing all the values of an array. In this case, typecasting the address of our struct and then 
+            //This behaves just like printing all the values of an array. In this case, typecasting the address of our struct and then
             //increments it by i, just like in index of array, and dereferenced it to get it's value
             printf("%02x ", data);
         }
@@ -1618,7 +1570,7 @@ int main(){
 
 /*
     Changing values for increment/decrement & augmented assignment operator
-    int j = 10; 
+    int j = 10;
     printf("%d", j+1); outputs 11
     printf("\n%d", j); outputs 10
     printf("\n%d", ++j); outputs 11
@@ -1634,15 +1586,15 @@ int main(){
 /*
         Binary Operators
             This operators operate on binary digits. Compares true or false.
-                We have : 
+                We have :
                     AND (&) - Returns 1 if both binary digits are 1, otherwise returns 0
                     OR (|) - Returns 1 if at least 1 binary has 1, otherwise returns 0
-                    XOR (^) - Returns 0 if two binary has 1, vice versa. Acts just like AND and OR but 
+                    XOR (^) - Returns 0 if two binary has 1, vice versa. Acts just like AND and OR but
                               when the same values come, they return the opposite value
                     Complementary (~) - Makes the bits/opperand opposite
                     Left Shift (<<) - Shifts and times the value to a certain value of the binary to some position
                         syntax : var = var << position_number
-                    Right Shift (>>) - Shifts and devides the value to a certain value of the binary to some position  
+                    Right Shift (>>) - Shifts and devides the value to a certain value of the binary to some position
                         syntax : var = var >> position_number
     ** The "certain value" from left shift and right shift pertains to the number in which
        the value of the byte will change. It's always base 2 in multiplication if the pos-
@@ -1662,72 +1614,71 @@ int main(){
         Binary digit counting always start at the end, and each "1" in each individual position will
         "activate" the binary values that are above.
             e.g : 8 =  00001000
-                : 10 = 00001010 // the position's 2 has a 1 so it "activated" it's value 
+                : 10 = 00001010 // the position's 2 has a 1 so it "activated" it's value
                 : 11 = 00001011 // the position's 2 and 1 has a 1 so it "activated" it's value
 
     */
-   // Application --------------------------------------------------------------------------------------
-   /*
-   int age = 6; // binary =   00000110
-   int age_2 = 12; //binary = 00001100 
-   int result = 0; //binary = 00000000
-   int a = 64;
+// Application --------------------------------------------------------------------------------------
+/*
+int age = 6; // binary =   00000110
+int age_2 = 12; //binary = 00001100
+int result = 0; //binary = 00000000
+int a = 64;
 
-    result = age & age_2; // binary = 00000100
-    printf("AND result: %d\n", result);
-    result = age | age_2; //binary = 00001110;
-    printf("OR result: %d\n", result);
-    result = age ^ age_2; //binary = 00001010;
-    printf("XOR result: %d\n", result);
-    result = ~age; //00000110 becomes 11111001; 128+64+32+16+8+1
-    printf("Complementary result: %d\n", result);
-    result = age << 1; // original binary = 00000110 | left shift = 00001100 
-    printf("Left Shift result: %d\n", result);
-    result = age_2 >> 1; //original binary = 0000110 | right shift = 00000110
-    printf("Right Shift result: %d\n", result); 
-    result = a >> 2;
-    printf("Left Shift of a: %d\n", result);
-    */
+ result = age & age_2; // binary = 00000100
+ printf("AND result: %d\n", result);
+ result = age | age_2; //binary = 00001110;
+ printf("OR result: %d\n", result);
+ result = age ^ age_2; //binary = 00001010;
+ printf("XOR result: %d\n", result);
+ result = ~age; //00000110 becomes 11111001; 128+64+32+16+8+1
+ printf("Complementary result: %d\n", result);
+ result = age << 1; // original binary = 00000110 | left shift = 00001100
+ printf("Left Shift result: %d\n", result);
+ result = age_2 >> 1; //original binary = 0000110 | right shift = 00000110
+ printf("Right Shift result: %d\n", result);
+ result = a >> 2;
+ printf("Left Shift of a: %d\n", result);
+ */
 
-    // HOW TO SWAP THE VALUES OF TWO VARIABLE USING BITWISE OPERATOR : XOR
-    /*
-        #include <stdio.h>
-        int main(){
+// HOW TO SWAP THE VALUES OF TWO VARIABLE USING BITWISE OPERATOR : XOR
+/*
+    #include <stdio.h>
+    int main(){
 
-            int x = 25, y = 40;
-            //x = 00011001
-            //y = 00101000
-            x = x ^ y; //00110001 = 49
-                    //00101000
-            printf("%d", x);
-            y = x ^ y; // 00011001 = 25
-            printf("\ny = %d", y);
-            x = x ^ y; //00110001
-                    //00011001 
-                    //00101000 = 40
-            printf("\nx = %d", x);
-        }   
-    */
-
+        int x = 25, y = 40;
+        //x = 00011001
+        //y = 00101000
+        x = x ^ y; //00110001 = 49
+                //00101000
+        printf("%d", x);
+        y = x ^ y; // 00011001 = 25
+        printf("\ny = %d", y);
+        x = x ^ y; //00110001
+                //00011001
+                //00101000 = 40
+        printf("\nx = %d", x);
+    }
+*/
 
 //---------------------------------Boolean-----------------------------------------
-/*  
+/*
     Boolean  are values that are either zero or one, false(0) or true(1).
         Relational and logical operators are true boolean values.
-        String functions and Memory functions are not true boolean values. This means that their 0 means true, and 1 means false. 
+        String functions and Memory functions are not true boolean values. This means that their 0 means true, and 1 means false.
 
         Boolean logic doesn't apply to everything, just like in string functions and memory functions
-        In boolean logic, non zero values are true and vice versa, but in non boolean logic the functions may return something else, 
+        In boolean logic, non zero values are true and vice versa, but in non boolean logic the functions may return something else,
         that is being the opposite of that. They can return calculations, pointers, addresses, and etc. They are similar however as they
         are all comparizon operators.
 
 */
 
 /*
-    CHARACTER MANIPULATION : 
+    CHARACTER MANIPULATION :
         works only with individual character : returns boolean like values, so it's much better to have a boolean
         placeholder
-     
+
    syntax (not complete)
 isalpha - checks if a characer is alphabetic (returns !0 = true, 0 = false)
 isalnum - checks if a character is alphanumeric(alphabet or digit) (returns !0 = true, 0 = false)
@@ -1754,38 +1705,37 @@ strtod 0 similar to strtol but with floating point data types
 */
 
 /*
-    HEXADECIMAL 
+    HEXADECIMAL
         Hex is a method of counting that includes 0-9, a-z, A-Z. They can be reference by the %x format identifier, but this varies.
 
 
 */
 
-
 //---------------------------------FILE-----------------------------------------
 /*
-		WRITING | APPEND | READ OF FILES
-			Presummably, this is systems programming, although in surface level. In here we can create a non-existing file, 
-			edit an existing one, and read it. The function is in the standard input and output, and there are three modes
-			in file manipulation:
+        WRITING | APPEND | READ OF FILES
+            Presummably, this is systems programming, although in surface level. In here we can create a non-existing file,
+            edit an existing one, and read it. The function is in the standard input and output, and there are three modes
+            in file manipulation:
 
-		Modes : Write(w), Append(a), Read(r)
+        Modes : Write(w), Append(a), Read(r)
         Data type : FILE
-	
-	In opening and creating files, we can set it's trajectory by using either a relative or absolute file paths. The relative
-	file path is the current file directory of the code this is being written into. The absolute file path is any file location\
-	within the system.
+
+    In opening and creating files, we can set it's trajectory by using either a relative or absolute file paths. The relative
+    file path is the current file directory of the code this is being written into. The absolute file path is any file location\
+    within the system.
 
     If the pointer doesn't find the file name by having the absolute file path, then it will return a null, otherwise it will return
     a unique address.
 
-	syntax: 
-	
-	Opening files (relative) : FILE pointer = fopen("file name", "mode") block of code fclose(pointer name);
-	Opening files (absolute) : FILE pointer = fopen("directory_file_name"", "mode") ;
-	Writing into files : fprintf(pointer_name, "type here"); This works just like printf(i.e \\ reserved characters)(append or write mode)
-	Reading files : fgets(buffer, size, pointer) | The buffer is a container for a line of text, you can have all the content of that file
-												   if you have a while loop to iterate a scan through each line in that file
-	fclose(pointer name) - closes/exits the function
-	remove("file_name") - returns 0 if success, and returns a non-zero if failed to find the file
+    syntax:
 
-	*/
+    Opening files (relative) : FILE pointer = fopen("file name", "mode") block of code fclose(pointer name);
+    Opening files (absolute) : FILE pointer = fopen("directory_file_name"", "mode") ;
+    Writing into files : fprintf(pointer_name, "type here"); This works just like printf(i.e \\ reserved characters)(append or write mode)
+    Reading files : fgets(buffer, size, pointer) | The buffer is a container for a line of text, you can have all the content of that file
+                                                   if you have a while loop to iterate a scan through each line in that file
+    fclose(pointer name) - closes/exits the function
+    remove("file_name") - returns 0 if success, and returns a non-zero if failed to find the file
+
+    */

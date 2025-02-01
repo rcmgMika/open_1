@@ -24,7 +24,7 @@ public class database{
             String author = JOptionPane.showInputDialog(null, "Please provide an author.", "Library", JOptionPane.NO_OPTION);
             if(author == null)break;
             StringBuilder existing_books = new StringBuilder();
-            for(int i = 0; i < books.size(); i++){
+            for(int i = 0; i < books.size(); i++){//appends all books, must change to appends only the consisting authros, genre, and title
                 existing_books.append(i+1+". ").append(books.get(i).Book_name).append("\n");
             }
             for(int i = 0; i < books.size(); i++){
