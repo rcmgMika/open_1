@@ -837,8 +837,34 @@ public class Untitled1{
          * 
          * 
          * 
+         *-------------------------------------------------------------------------------
+         *  
+         *  Encapsulation
          * 
+         *      The concept of the attributes of a class will be hidden or protected, 
+         *  because not all times we want a user to access the attributes of a class. This
+         *  adds protection by using the access modifiers. And to access or get the 
+         *  values, we will implement the getter and setter functions. This functions will
+         *  instead act as a formal way to access the private elements.
+         *      
+         *      Syntax:
          * 
+         *          class encryption{
+         *              private int settings;
+         * 
+         *              encryption(int settings){
+         *                  this.setSettings(settings);
+         *              }
+         *  
+         *              public int getSettings(){
+         *                  return this.settings;
+         *              }
+         *              
+         *              public int setSettings(int settings){
+         *                  this.settings = settings;
+         *              }
+         *      
+         *          }
          * 
          * 
          * 
