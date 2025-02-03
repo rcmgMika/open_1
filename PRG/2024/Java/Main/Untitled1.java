@@ -1027,47 +1027,81 @@ public class Untitled1 {
          * 
          * 
          * -----------------------------------------------------------------------------
-         * --
+         *  Polymorphism
          * 
-         * Polymorphism
+         *      This is the ability of a class to be identified as more than one datatype
+         *  with inheritance, so that for example we can create an array of a superclass
+         *  containing the different subclasses as they classify as that superclass' data
+         *  type as well.
          * 
-         * This is the ability of a class to be identified as more than one datatype
-         * with inheritance, so that for example we can create an array of a superclass
-         * containing the different subclasses as they classify as that superclass' data
-         * type as well.
+         *      Syntax:
          * 
-         * Syntax:
+         *      class person{
+         *          void invest(){}
+         *          void buy(){}
+         *      }
          * 
-         * class person{
-         * void invest(){}
-         * void buy(){}
-         * }
+         *      class poor extends person{
          * 
-         * class poor extends person{
+         *          @override
+         *          public buy(){}
+         *      }
          * 
-         * @override
-         * public buy(){}
-         * }
+         *      class rich extends person{
          * 
-         * class rich extends person{
+         *      @override
+         *      public buy(){}
+         *      public invest(){}
+         *      }
          * 
-         * @override
-         * public buy(){}
-         * public invest(){}
-         * }
+         *      public class main{
          * 
-         * public class main{
+         *          public static void main(String[] args){
+         *          poor person = new poor();
+         *          rich person = new rich();
+         *          person[] people = {poor, rich};
+         *          for(person individual : people){
+         *          individiual.invest()
+         *          }
+         *          }
          * 
-         * public static void main(String[] args){
-         * poor person = new poor();
-         * rich person = new rich();
-         * person[] people = {poor, rich};
-         * for(person individual : people){
-         * individiual.invest()
-         * }
-         * }
+         *      }
          * 
-         * }
+         *      This actually helps with making objects or instatiating objects from
+         *  a different declared dataype like,
+         *      
+         *              Car my_car = new Supra();
+         * 
+         *      As we can see here, the Supra class is a subclass of the car, which 
+         *  means we can use the Car class as the data type for the Supra class.
+         * 
+         * 
+         * -----------------------------------------------------------------------------
+         *  Dynamic Polymorphism
+         * 
+         *      First let us define what is dynamic and static in programming. In the 
+         *  above polymorphism topic, I discussed the static implementation of it. 
+         *  In programming, static is defined as before compilation or compile time 
+         *  while  dynamic is after compilation and during runtime; compile time means
+         *  the period when the code is being compiled. We have also what we call binding
+         *  which is the memory allocation and function calls being resolved with static
+         *  and dynamic. The static binding's memory allocation and function calls being
+         *  resolved is done during compile-time, while dynamic is done after and during 
+         *  runtime.
+         * 
+         *      Syntax:
+         * 
+         *          Car type;
+         * 
+         *          String type = scan.nextLine();
+         *  
+         *          if(type == supra) type = new supra();
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
          * 
          * 
          * 
