@@ -70,9 +70,27 @@
         }
         display{
             display: flex; - this is for flex container creation that every child of 
-                             a tag will become a its container element for control of alignment and position.
+                             a tag will become its container element for control of alignment and position.
         }
-                             
+        border{
+            border-style:(solid, dotted, groove, double, hidden, none, ridge, unset, inset) - This styles the border
+            border-width: px - This initializes the border's thickness
+            border-color: rgb, hex, hsl, normal - This initializes the border's color
+            border-radius: px - This is for the rounded corners
+
+        short-hand version, combination of border-style, width, and color for short syntax
+            border: width style color;
+        Specific border styling
+            border-left: short-hand version/long - Styles the left border
+            border-right: short-hand version/long - Styles the right border
+            border-top: short-hand version/long - Styles the top border
+            border-bottom: short-hand version/long - Styles the bottom border
+        }
+        shadow{
+            text-shadow: horizontal(px/-px) vertical(px/-px) blur(px), (if you want to add more shadow use comma) - Used for texts like h1-h6, p, pre, etc
+            box-shadow: horizontal(px/-px) vertical(px/-px) blur(px), (if you want to add more shadow use comma) - Used for boxes like images, div, buttons, etc
+        }
+
 
     
 
