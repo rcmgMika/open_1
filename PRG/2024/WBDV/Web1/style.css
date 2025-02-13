@@ -1,14 +1,11 @@
-#image1{
-    box-shadow: -10px 10px 10px lightblue, 10px 10px 10px lightslategray;
-    height:450px;
-    display: flex;
-    align-content: center;
-    border-radius:10px;
+body{
+    margin: 100px;
 }
-
-#shit{
-    height: 500px;
-    width: 500px;
-    box-shadow: 20px 20px 10px black;
-    border-radius:10px;
+.box{
+    height: 300px;
+    width: 200px;
+    border: 10px solid black;
+    background-color: khaki;
+    overflow: auto;
+    margin: auto;
 }

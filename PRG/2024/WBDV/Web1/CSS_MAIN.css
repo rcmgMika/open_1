@@ -71,6 +71,8 @@
         display{
             display: flex; - this is for flex container creation that every child of 
                              a tag will become its container element for control of alignment and position.
+            display: flow-root; - this allows elements within the float property to never
+                                    go out of their position(height and width) and belong only to the specified border.
         }
         border{
             border-style:(solid, dotted, groove, double, hidden, none, ridge, unset, inset) - This styles the border
@@ -87,8 +89,28 @@
             border-bottom: short-hand version/long - Styles the bottom border
         }
         shadow{
-            text-shadow: horizontal(px/-px) vertical(px/-px) blur(px), (if you want to add more shadow use comma) - Used for texts like h1-h6, p, pre, etc
+            text-shadow: horizontal(px/-px) vertical(px/-px) blur(px), (if you want to 
+                                            add more shadow use comma) - Used for texts like h1-h6, p, pre, etc
             box-shadow: horizontal(px/-px) vertical(px/-px) blur(px), (if you want to add more shadow use comma) - Used for boxes like images, div, buttons, etc
+        }
+        margin{
+            margin: 0/0px/auto; - This is the spaces around an element. The auto value  
+                                    makes the margin to automatically add spaces around it, so if you have margin-left: auto; then you object will be at the right-hand side of the webpage as it automatically adds spaces or marginalize to the left. 
+            margin-left: 0/0px/auto;
+            margin-right: 0/0px/auto;
+            margin-top: 0/0px/auto;
+            margin-bottom: 0/0px/auto;
+        }
+        float{
+            float: left/right; - This makes other elements to flow around an element as 
+                                    elements usually have newlines over them and divs containing the whole block.
+            display: flow-root - This allows elements to never go outside the 
+                                    corresponding height and width.
+        }
+        overflow{
+            overflow: visible/hidden/clip/scroll/auto; - This manipulates how an overflow 
+                                                        of content from a parent element can be displayed. The visible displays the overflow; the hidden does not display the overflow but it is still there; the clip is just like hidden but you can customize how many content will overflow with the use of the overflow-clip-margin property; the scroll value provides the overflow content a scroll bar to navigate the content when overflow happens but is disabled when there is no overflow, and also you can still see the scroll bar; the auto value is just like scroll but you can no longer see the scroll bar when there is no overflow and only comes back when there is.
+            overflow-clip-margin: 0px; - This manipulates how many overflow there will be.
         }
 
 
