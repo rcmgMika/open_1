@@ -338,6 +338,67 @@
 #
 #   Class, functions, self, cls, args, kwargs
 #
+#       Classes contains members such as attributes and method. To access this methods
+#       require either the cls, self, or an object.
+#
+#       Class-level attributes - These are variables that is initialized in the class,
+#       outside of any functions, and shared among all instances variable, and this is  
+#       the same with the static variables in Java.
+#
+#       Local Variable - Variables inside functions and cannot be accessed outside
+#
+#       Global Variable - Just like in C, where it is outside of functions and classes
+#
+#       Instance Variables - This are variables that belong to the object itself only;
+#       these are non-static Java variables; and this is initialized using self inside
+#       functions.
+#
+#       Function Call inside Functions - This can be done using self's dot operator,
+# 
+#           class test:
+#               def show(self):
+#                   self.var = 0
+#               def access(self):
+#                   self.show()
+#       Accessing Instance Variables - This can be done by calling the function first,
+#       as functions cannot see each other,
+#
+#           class test:
+#               def show(self):
+#                   self.var = 0
+#               def access(self):
+#                   self.show()
+#                   print(self.var)
+#
+#       Class Method - This references class-level variables using @classmethod and cls, 
+#       equivalent to self but for class-level variables
+#
+#           class test:
+#               access_this = 1
+#
+#               @classmethod
+#               def show(cls):
+#                   print(cls.access_this)
+#               
+#       __init__ - This is the constructor of a class,
+#               
+#           class construct:
+#               def __init__(self, val1, val2):
+#                   self.val1 = val1
+#
+#       Overloading - There are no overloads in Python, but what we can do is initialize 
+#       the variables in the parameter so that even if the user does not provide arguments
+#       or the formal parameters it will still have value
+#
+#           class construct:
+#               def __init__(self, val1=None, val2=None):
+#                   self.val1 = val1
+#               
+#           object = construct() 
+#           object2 = construct(1, 2)
+#
+#       *args - This are tuples as actual parameters in a function
+#       **kwargs - This are dictionaries as actual parameters in a function        
 #
 # ------------------------------------------------------------------------------------
 #
