@@ -103,6 +103,7 @@
 #           /= divide
 #           **= exponential
 #           %= modulus
+#           / / - floor division, rounds down the result to a whole number
 #           
 #       Functions that doesn't need the math library:
 #           round()
@@ -294,6 +295,14 @@
 #       
 #           while (condition is true):
 #
+#       You can also have,
+#           for i, j in list:
+#               print(i, j)
+#
+#       Wherein rather than only scanning 1 value with one counter, i, you will have 
+#       multiple counters, in here two, but this will only works in 2d collections
+#       and if you have only the number of counters in each collections in that
+#       collection.
 #
 #
 # ------------------------------------------------------------------------------------
@@ -408,44 +417,48 @@
 #
 #
 #
+# ------------------------------------------------------------------------------------
+#
+#   Dictionary
+#
+#       A dictionary is a key value pair, defined as {key:value}, wherein the only way
+#   for you to get the values is to reference their keys first. This is changeable and
+#   ordered, but cannot have duplicates as keys are just like functions wherein one 
+#   input returns one ouput.
+#
+#       Syntax:
+#           dict = {1:2, "Kali":"Linux", 1.2:23.1, key:list()}
+#
+#   In here, you can assign any values to the keys. Also, if a key doesn't exit, the
+#   get function or how you get the values through passing they key, it returns None.
+#
+#       Methods:
+#           get(key) - References the value
+#           update({key:value}) - Change (set in java) or Append (add/push) values
+#           pop(key) - Removes a value
+#           popitems() - Pops a value, LIFO
+#           items() -  This returns a dictionary through a tuple with the keys inside, 
+#                     individually stored in lists
+#           values() - Returns a dictionary through a tuple with values inside, 
+#                      individually stored in lists
+#           keys() - Returns a dictionary through a tuple with keys inside, individually
+#                    stored in lists
+#           clear() - Clears a dictionary
 #
 #
+# ------------------------------------------------------------------------------------
+#   Random
+#       This generates random values specified by the methods used. And this can be 
+#   accessed through importing the random library.
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#       Syntax & Functions:
+#           import random
+#           
+#           .random() - Generates a floating-point number between 0-1
+#           .randint(start, end) - Both start and end are inclusive, generates a number 
+#                                  between those values
+#           .choice(sequence) - Generates output based on a collection or sequence
+#           .shuffle(sequence) - Shuffles the collection
 #
 #
 #
