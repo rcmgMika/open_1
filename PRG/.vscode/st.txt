@@ -1,0 +1,44 @@
+{
+  "files.autoSave": "afterDelay",
+  "grunt.autoDetect": "on",
+  "gulp.autoDetect": "on",
+  "jake.autoDetect": "on",
+  "workbench.sideBar.location": "right",
+  "code-runner.runInTerminal": true,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.iconTheme": "icons",
+  "git.openRepositoryInParentFolders": "never",
+  "redhat.telemetry.enabled": false,
+  "cmake.showOptionsMovedNotification": false,
+  "glassit.alpha": 250,
+  "editor.cursorStyle": "block",
+  "workbench.statusBar.visible": false,
+  "java.project.sourcePaths": ["src"],
+  "editor.codeActionsOnSave": {},
+  "workbench.activityBar.location": "hidden",
+  "window.menuBarVisibility": "compact",
+
+  "editor.lineNumbers": "off",
+  "animations.Install-Method": "Apc Customize UI++",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 90,
+  "editor.guides.indentation": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.renderLineHighlight": "none",
+  "workbench.settings.applyToAllProfiles": [
+  
+    
+  
+  ],
+
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "editor.formatOnSave": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "explorer.confirmDelete": false
+}
