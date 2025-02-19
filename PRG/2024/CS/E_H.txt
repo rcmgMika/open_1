@@ -1,0 +1,239 @@
+Computer hardware refers to the physical components that make up a computer system. These components work together
+to provide functionality such as processing, storage, input/output operations, cooling, and power delivery. Below
+is an overview of the key hardware parts, their functions, and a summary for each.
+
+---
+
+### 1. **Case**
+   - **What it does**: The case encases the computer's internal components like the motherboard, CPU, RAM, storage
+devices, GPU, etc., providing necessary support and protection.
+   - **Uses**:
+     - Protects internal components from dust, temperature fluctuations, and physical damage.
+     - Provides space for additional hardware (e.g., expansion cards, fans).
+   - **Summary**: The case is the enclosure where all computer components are housed, ensuring safe operation and
+allowing easy access to parts.
+
+---
+
+### 2. **Motherboard**
+   - **What it does**: The motherboard is the primary printed circuit board (PCB) in a computer that connects the CPU to other components like RAM,
+storage devices, expansion slots, and input/output devices.
+   - **Uses**:
+     - Connects the processor (CPU) to memory, storage, and other peripheral devices.
+     - Houses embedded memory (cache) for faster data access.
+   - **Summary**: The motherboard serves as a communication bridge between the CPU and other components, ensuring efficient data transfer.
+
+---
+
+### 3. **Central Processing Unit (CPU)**
+   - **What it does**: The CPU is the "brain" of the computer, performing calculations, executing instructions, and managing tasks.
+   - **Uses**:
+     - Executes programs and applications by processing instructions.
+     - Coordinates operations between hardware components to ensure smooth performance.
+   - **Summary**: The CPU processes data, executes programs, and coordinates system operations for overall computer functionality.
+
+---
+
+### 4. **Random Access Memory (RAM)**
+   - **What it does**: RAM is a volatile memory used for temporarily storing data that the computer needs to access quickly.
+   - **Uses**:
+     - Provides fast memory access for running applications and executing programs.
+     - Acts as cache memory for the CPU, improving performance by reducing access time.
+   - **Summary**: RAM stores temporary data required for current operations, offering faster memory access compared to slower storage devices.
+
+---
+
+### 5. **Storage Devices**
+   - **What it does**: Storage devices store permanent copies of data, providing long-term retention and redundancy.
+   - **Types**:
+     - **Primary Storage (Hard Disk Drive - HDD)**: Non-volatile memory (NVM) storing the main operating system and most applications.
+     - **Secondary Storage (Solid-State Drive - SSD)**: NVM offering faster read/write speeds and no moving parts for reliability.
+   - **Uses**:
+     - Stores data files, programs, and operating systems.
+     - Backups or extends storage space if needed.
+   - **Summary**: Storage devices store permanent copies of data, ensuring data availability even after power loss.
+
+---
+
+### 6. **Graphics Processing Unit (GPU)**
+   - **What it does**: The GPU is responsible for rendering graphics and video processing in applications like gaming, design software, and media
+playback.
+   - **Uses**:
+     - Accelerates graphics-intensive tasks and video rendering.
+     - Provides visual output for games, simulations, and creative applications.
+   - **Summary**: The GPU generates visual content by optimizing graphics performance, especially beneficial for multimedia and gaming.
+
+---
+
+### 7. **Cooling System**
+   - **What it does**: The cooling system dissipates heat generated during processing to prevent overheating and ensure optimal performance.
+   - **Types**:
+     - **Air Cooling**: Uses fans and natural airflow to remove heat.
+     - **Liquid Cooling**: Circulates coolant (e.g., water) through the system to manage temperatures.
+   - **Uses**:
+     - Removes excess heat from components like CPU, GPU, and RAM.
+     - Maintains component longevity by preventing thermal throttling or failure.
+   - **Summary**: The cooling system manages heat dissipation, protecting computer components and ensuring reliable operation.
+
+
+
+
+ls{
+   ls - list all files
+   -a - show hidden
+   -l - show more info
+}
+
+pwd - present working directory
+cd - change directory
+whoami - show current user
+
+man - manual
+-h/--help - show all keys/commands
+
+locate - show all results with the keyword
+whereis - show all the binaries, source files, manuals
+which - shows the binary in $PATH or environment variables
+find{
+     - you can specify here where to search from, like find / to search from root
+    type - this is where you specify the type like f for file, d for directory, etc
+    name - this is where you enter the base of the file or its name
+}
+
+cat - Concatenates output
+head - Concatenates output starting from the top, default 10 lines
+tail - Concatenates output starting from the bottom, default 10 lines
+nl - Lined cat
+
+user creation/deletion{
+	adduser - Adds user, this will also prompt you for password
+	chmod -aG access(like sudo) - This will append (a) to groups (G) of accesses(like sudoer) the user
+	chsh -s shell_type - This changes the default shell of the user, like /bin/bash
+
+	passwd - This replaces the password of a user
+	
+	deluser (--remove-home) - This removes a user, and if you want to remove their files use --remove-home
+}
+
+Grep - filter, used by the pipe, |, to send arguments to the grep
+
+ps{
+	ps - Processes, this shows you current active processes
+	aux - This is three flags, a, u, x, that shows all the active processes
+}
+
+echo{
+	echo - used to print outputs
+	$PATH - show environment variables
+}
+
+
+
+
+Networking
+
+LAN - Local Area Network : This is a local network that cannot connect to the public internet, and only devices
+			   connected within this LAN can communicate to each other
+IP address - Internet Protocol - This is an identifier assigned to a computer to communicate to other devices; 
+                                 this can either be private for LANs or public to communicate to the public 
+                                 internet. The IP address is used primarily for global networks, outside of LAN.
+				 Data Link Layer 3 of the OSI model
+MAC address - Media Access Control - This is an identifier assigned to a computer, just like in IP addresses, but is
+				     primarily used for communication of devices in a LAN. This is globally unique.
+	How does a device send data to other devices in a LAN?
+		First we need to find the MAC address using ARP, Address Resolution Protocol. After that, we communicate
+		through network switches (for ethernet) or access points (for WIFI) to route and forward our data to
+		the corresponding MAC address. 
+
+IPv4 - Internet Protocol version 4 - This is an IP address represented by 32 bits or 4 bytes where each individual
+				     byte is equal to 0-255; so IPv4 has roughly 4.3 billion IP addresses or 2^32.
+NAT - Network Address Translator - This device translates a device's private IP, assuming it wants to connect to
+				   the public internet, into one of its public IPs provided by an Internet Service
+                                   provider. The NAT is found in the router.
+DHCP (server) - Dynamic Host Configuration Protocol - This is a server that provides private IP's of a LAN to a device 
+						      requesting for it to communicate with the LAN; however the private
+						      IP address is only limited to a certain time, and this is called 
+                                                      Lease.
+
+Packet - Small data from a large one; this is a split data so that a larger data can be sent or received faster
+
+TCP - Transmission Control Protocol
+
+IP Packets - Small information that is sent or received through the public network
+	header - Information about source, destination, type of service, etc.
+	payload - Where data is stored
+
+Data Packet - Part of an IP's payload
+	header
+	payload 
+
+TCP Packet - 
+	header
+	payload
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+### 8. **Power Supply Unit (PSU)**
+   - **What it does**: The PSU converts AC power from the wall into DC power required by the computer's components.
+   - **Uses**:
+     - Provides necessary electrical power to the motherboard, CPU, RAM, storage devices, and GPU.
+     - Regulates voltage levels to ensure optimal component performance.
+   - **Summary**: The PSU efficiently delivers DC power, ensuring all components receive stable and regulated power supply.
+
+---
+
+### 9. **Operating System (OS)**
+   - **What it does**: The OS manages the computer's hardware and software resources, providing services like file management, network access, and
+security.
+   - **Uses**:
+     - Orchestrates system operations by managing hardware and software interactions.
+     - Provides essential utilities for users to interact with the computer.
+   - **Summary**: The operating system acts as an intermediary between users and hardware, delivering a user-friendly interface and necessary
+services.
+
+---
+
+### Additional Components
+
+- **Motherboard Expansion Slots**: Allow for additional expansion cards (e.g., graphics, networking) to enhance functionality.
+  - **Summary**: Provide flexibility by enabling extra hardware modules.
+
+- **Cooling Fans**: Circulate air or liquid to manage heat distribution in the computer case.
+  - **Summary**: Assist in maintaining optimal temperatures and preventing overheating.
+
+---
+
+### Summary of Computer Hardware
+Computer hardware consists of various components that work together to provide processing, storage, input/output capabilities, and power delivery.
+Each part has specific functions tailored to ensure efficient operation and performance. Together, they form the backbone of a functional computer
+system, enabling users to perform tasks like computing, multitasking, and data management effectively.
+
+This overview highlights the importance of each component in delivering seamless computer functionality while emphasizing their individual roles in
+the overall system.
