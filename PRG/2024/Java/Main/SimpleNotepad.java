@@ -35,7 +35,7 @@ public class SimpleNotepad extends JFrame {
         add(new JScrollPane(textArea), BorderLayout.CENTER);
     }
 
-    private void openFile() {
+    private void openFile() { // Event-handler methods - Automatically invoked by the event-handler system when a specific action, like button clicking, happens
         int returnValue = fileChooser.showOpenDialog(this);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             try (BufferedReader reader = new BufferedReader(new FileReader(fileChooser.getSelectedFile()))) {
