@@ -411,16 +411,22 @@
 #
 # ------------------------------------------------------------------------------------
 #
-#   Keywords
+#   Membership Operators
 #
-#       in - used for a lot of things but generally through iteration. It iterates
-#   into an entire collection and scans or assigns, or both. The scan also has a term
-#   membership test wherein you can use either a loop or not iterative, like
+#       in - used for a lot of things but generally through iteration or finding a value 
+#   in a sequence. It iterates into an entire collection and scans or assigns, or both. 
+#   The scan also has a term membership test wherein you can use either a loop or not 
+#   iterative, like
 #
 #       for val in values (iterative)
 #           or
 #       if val in values (non-iterative)
+#           and
+#       if name not in names    
 #
+#
+#
+
 # ------------------------------------------------------------------------------------
 #
 #   Dictionary
@@ -451,7 +457,7 @@
 #
 #
 # ------------------------------------------------------------------------------------
-#   Random
+#   Random  
 #       This generates random values specified by the methods used. And this can be 
 #   accessed through importing the random library.
 #
@@ -552,18 +558,24 @@
 #       "".join(iterable)
 #
 #
+# ------------------------------------------------------------------------------------
+#   List Comprehension
 #
+#       This is a concise way to write lists using the for loop, membership operator,
+#   condional statements or expressions, and ternary expression. There is also a structure
+#   to write this,
+#       
+#       non-ternary,
+#           [expression for value in iterable if condition]
+#           [expression for value in iterable]
 #
+#       ternary expression,
+#           [expression if condition else expression for value in iterable]
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#       Here the expression is the value itself but can be manipulated and thus called 
+#   the expression. It is optional to write expressions and conditions. And generally this
+#   is used to create lists or have an existing list to filter with the use of conditions
+#   and expressions.
 #
 #
 #
