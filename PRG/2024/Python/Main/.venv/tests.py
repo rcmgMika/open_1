@@ -1,7 +1,2 @@
-# import subprocess
+print(ord('p')**ord('p'))
 
-# shit = subprocess.run(["dir"], shell=True, capture_output=True, text=True)
-
-# print("PRG" in shit.stdout)
-
-print("Hello, World")

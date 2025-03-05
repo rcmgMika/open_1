@@ -413,9 +413,13 @@
 #
 #   Keywords
 #
-#       in
+#       in - used for a lot of things but generally through iteration. It iterates
+#   into an entire collection and scans or assigns, or both. The scan also has a term
+#   membership test wherein you can use either a loop or not iterative, like
 #
-#
+#       for val in values (iterative)
+#           or
+#       if val in values (non-iterative)
 #
 # ------------------------------------------------------------------------------------
 #
@@ -460,85 +464,92 @@
 #           .choice(sequence) - Generates output based on a collection or sequence
 #           .shuffle(sequence) - Shuffles the collection
 #
+# ------------------------------------------------------------------------------------
+#   Default Arguments
 #
+#       This is a predefined value for parameters so that it reduces the amount of
+#   arguments to be inputted. 
 #
+#       def func(end, start=0):
+#       func(20)
 #
+#       This functions assumes the every count will start at 0, making the argument
+#   less. But the user can also give value to the start,
 #
+#       func(20, 1)
 #
+#       Also, it is advisable to always have the non-default arguments or positional
+#   arguments to be in the first parameters followed by the default.
 #
 #
+# ------------------------------------------------------------------------------------
+#   Keyword Arguments
 #
+#       This is an argument preceeded by an identifier or a parameter's variable to
+#   specify where the value should go. And this makes having arguments in a function
+#   to not be ordered or positional. Although there is a rule that if an argument
+#   is positional, then it must be before the keyword arguments.
 #
+#       def func(year, date, day):
 #
+#       func(2006, day=10, date=02)
 #
+#   We can also see keyword arguments with the print statement,
 #
+#       print("Hellow", "Worlds", end=" "), with end being the keyword argument in
+#   place of the default argument end="\n" 
 #
 #
 #
+# ------------------------------------------------------------------------------------
+#   Arbitrary Arguments
 #
+#   * is an unpacking operator that packs arguments into their corresponding parameter
+#   like args or kwargs
 #
+#   *args - arguments, allows for passing non-keyword arguments into a tuple
+#   **kwargs - keyword arguments, allows for passing keyword arguments into a dictionary
 #
+#       def func(*args):
+#       def func(**kwargs):
 #
+#       You can also change the names for args and kwargs as the unpacking operator is the
+#   most important piece for passing multiple arguments if a user does not know how many
+#   arguments there will be.
 #
+#       def func(*name):
+#       def func(**age):
 #
+#       In kwargs, every identifier or assignment is a string like,
 #
+#           def func(**kwargs):
+#               print(kwargs.get('key'))
 #
 #
+# ------------------------------------------------------------------------------------
+#   Iterables
 #
+#       This is an object or collection that can return its element one at a time, 
+#   assuming that they have two or more elements, making them usable for loops.
 #
 #
 #
+# ------------------------------------------------------------------------------------
 #
+#   ord
 #
+#       The ord method can returns Unicode, but can be ASCII if its within 0-127. It
+#   accepts only characters and not string.
 #
+#       ord('a) - returns 97
+#       
+#   "".join
 #
+#       The join method is a method from the string object, and this is synomous with
+#   concatenate but can concatenate or join strings from collections or objects rather
+#   than just two strings with cat.
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#       "".join(iterable)
 #
 #
 #
