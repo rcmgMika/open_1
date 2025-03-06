@@ -174,10 +174,12 @@
 #           match method:
 #               match var:
 #                   case value:
+#                   case _:
 #       
 #           dictionary method:
 #               ----
-#
+#       The case _ is the default statement in which if none of the cases are executed
+#   then it will execute itself; also synonymous with else.
 #       
 # 
 #       Conditional Expression is the shortcut for the if-else statement, and it is like
@@ -578,26 +580,38 @@
 #   and expressions.
 #
 #
+# ------------------------------------------------------------------------------------
+#   Module
+#
+#       This is a file containing codes. It is what inside libraries. And there are three
+#   ways to write it; import module to reference everything in that module, import module 
+#   as nickname for referencing the with the nickname for saving space or making code   #   readable, and from module import specific_code, and this specific code can be  
+#   variables or constants or fields or attributes, methods, and classes. This specific 
+#   code is then referenced without referencing the module itself as we did with the 
+#   first two import statements. 
+#
+#       Syntax:
+#           import module
+#           import module as alias
+#           from module import attribute/class/method
 #
 #
+# ------------------------------------------------------------------------------------
+#   Variable Scope and Scope Resolution
 #
+#       Variable scope is where a variable is visible and accessible. And scope resolution
+#   is Python's way of using variables inside functions and has an order of use, LEGB, 
+#   such as local, enclosed, global, and built-in. It says that if a local variable is not
+#   found, then it will go to enclosed or if a nested function does not have its local 
+#   variable then it will look for the enclosed or the parent function's variable, and in 
+#   which case the local variable of that function. And now if these two are gone, then it
+#   will look for the global variable, or the variable outside of any class and function.
+#   And if that is gone, then it will look for the built-in variable found from the "from
+#   import" statement, in which we do not need to reference a module and access it's 
+#   attributes or methods with the dot operator.
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#       LEGB : local -> enclosed -> global -> built-in
+#           
 #
 #
 #
