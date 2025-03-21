@@ -1,3 +1,0 @@
-dc = {}
-
-print(len(dc))

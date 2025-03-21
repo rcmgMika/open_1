@@ -613,29 +613,31 @@
 #       LEGB : local -> enclosed -> global -> built-in
 #           
 #
+# ------------------------------------------------------------------------------------
 #
+#   main method and if __name__ == '__main__'
 #
+#   The main is where all the functions and attributes are executed, just like in C.
+#   In python, this main method is not necessarily executed, but it is good practice
+#   to have this and to this to be the only one executed when using the from-import
+#   of modules. This is because the from-import actually executes everything in a python
+#   file and integrates it, so if you have any code that outside of any class and 
+#   function, that will be executed and become unnecessary. So in this case, we can
+#   have a main function to put every executions that we want, and call it if we run
+#   the actual module itself with the if dunder name dunder is equal to the string of
+#   dunder main dunder. The dunder is a double underscore, "__". The __name__ returns
+#   your module, so if you run the module with that, then it will return main, but if
+#   you run it from a separate module, that is per say that you want to know the __name__
+#   of the other module and with from-import, then it will return the name of that module
+#   rather than the __main__ as we're not executing it from its module itself.
 #
+#       syntax:
+#           def main():
+#               #code here
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#           if __name__ == '__name__':
+#               main() 
+#    The purpose of the if statement is to run the main when it runs the module.
 #
 #
 #
