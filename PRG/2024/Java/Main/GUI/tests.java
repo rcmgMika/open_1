@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.FlowLayout;
 import java.awt.BorderLayout;
+import java.io.*;
 
 public class tests extends JFrame implements ActionListener {
     JMenuBar bar = new JMenuBar();
@@ -12,7 +13,8 @@ public class tests extends JFrame implements ActionListener {
     JMenuItem save = new JMenuItem("save");
     JMenuItem exit = new JMenuItem("exit");
     JTextArea text = new JTextArea();
-
+    JFileChooser chooseFile;
+    
     public void gui() {
         this.setSize(640, 640);
         this.setTitle("Akim's Notes");
