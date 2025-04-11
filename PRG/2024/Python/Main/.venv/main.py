@@ -641,26 +641,29 @@
 #
 #
 #
+# ------------------------------------------------------------------------------------
 #
+#   MUST DO!
+# 
+#   def main()
 #
+#       Having this, as in any other languages like Java or C, will make you code to
+#   be as readable as possible. This is where all your functions and variables will run 
+#   and be, and then calling this to the if __name__...
+#   
+#   Type Annotation | Type Hint
 #
+#       These are used to explicitly define what a placeholder's data type will be as
+#   variables in Python are dynamic and can hold any data types. 
 #
+#       -> used in functions: def func() -> None
+#           This defines what the function will return
 #
+#       : used in normal variables: number: int = 0
+#           This defines the data type of a variable
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+#       [] used in collections: list[int] = {0}
+#           This defines the data type of a collection
 #
 #
 #

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display the data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="content">
+        <div class="design">
+            <p>BSIT 1-Y2-6</p>
+            <p>Garcia, Robby Clifford M.</p>
+        </div>
+        <div class="middle">
+            <h3>First Name:</h3><p id="fname"></p>
+            <h3>Last Name: </h3><p id="lname"></p>
+            <h3>Date of Birth:</h3><p id="dob"></p>
+            <h3>Gender:</h3><p id="gender"></p>
+            <h3>Country:</h3><p id="country"></p>
+            <h3>E-Mail:</h3><p id="email"></p>
+            <h3>Phone:</h3><p id="phone"></p>
+            <h3>Password:</h3><p id="pwd"></p>
+            <h3>Confirm Password:</h3><p id="cpwd"></p>
+            <h3>Terms of Use</h3><p id="terms"></p>
+        </div>
+    </div> 
+
+
+    <script>
+        const url = new URLSearchParams(window.location.search);
+        const first_name = url.get("first_name");
+        const last_name = url.get("last_name");
+        const date = url.get("date");
+        const month = url.get("month");
+        const year = url.get("year");
+        const gender = url.get("gender");
+        const country = url.get("country");
+        const email = url.get("email");
+        const phone = url.get("phone");
+        const pwd = url.get("password");
+        const cpwd = url.get("cpassword");
+        const terms = url.get("terms");
+
+        document.getElementById("fname").textContent = ` ${first_name}`;
+        document.getElementById("lname").textContent = ` ${last_name}`;
+        document.getElementById("dob").textContent = ` ${month} ${date}, ${year}`;
+        document.getElementById("gender").textContent = ` ${gender}`;
+        document.getElementById("country").textContent = ` ${country}`;
+        document.getElementById("email").textContent = ` ${email}`;
+        document.getElementById("phone").textContent = ` ${phone}`;
+        document.getElementById("pwd").textContent = ` ${pwd}`;
+        document.getElementById("cpwd").textContent = ` ${cpwd}`;
+        document.getElementById("terms").textContent = ` ${terms}`;
+    </script>
+</body>
+</html>
