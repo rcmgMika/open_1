@@ -904,6 +904,11 @@ public class Untitled1 {
          * example, a manager is an employee.
          * 
          * 
+         * Also, using static methods for the child, those methods will not be able to
+         * access the fields and methods of the super class, and cannot use super,
+         * super() and this keywords.
+         *  
+         * 
          * 
          * *----------------------------------------------------------------------------
          * ----
@@ -1096,18 +1101,23 @@ public class Untitled1 {
          *  
          *          if(type == supra) type = new supra();
          * 
+         * -----------------------------------------------------------------------------
          * 
+         * Getters and Setters
          * 
+         *  This is used along side with encapsulation so that there will never be a 
+         * publicly accessible fields within intances and child classes using the private
+         * access modifier. This are methods that make fields either readable or writable.
          * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
-         * 
+         *      Syntax:
+         *          private int var;
+         *          
+         *          int getVar(){
+         *              return this.var;
+         *          }
+         *          void setVar(int var){
+         *              this.var = var;
+         *          }
          * 
          * 
          * 

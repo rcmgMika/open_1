@@ -4,9 +4,10 @@
     },
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
+        "PRG/2024/Java/Projects/note/pad/src/main/java/note",
         "PRG/2024/Java/Projects/Student Management System With Quiz/code",
         "PRG/2024/Java/Main/GUI",
         "PRG/2024/Java/Main",
-        "PRG/2024/Java/Projects/note/pad/src/main/java/note"
+        "PRG/2024/Java/Projects/note/pad/src"
     ]
 }

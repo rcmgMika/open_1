@@ -662,19 +662,20 @@
 #       : used in normal variables: number: int = 0
 #           This defines the data type of a variable
 #
-#       [] used in collections: list[int] = {0}
+#       [] used in collections: numbers:list[int] = [0]
 #           This defines the data type of a collection
 #
 #
+# ------------------------------------------------------------------------------------
 #
+#   Ellipsis or ...
 #
+#   This is used as kind of like a pass and specify what column there is in Numpy
 #
+#       def func():
+#           ...
 #
-#
-#
-#
-#
-#
+#       name = ...
 #
 #
 #
