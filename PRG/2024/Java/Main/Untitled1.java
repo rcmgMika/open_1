@@ -1023,7 +1023,7 @@ public class Untitled1 {
          * void method();
          * }
          * 
-         * public/class name implements name/or_more{
+         * public/class name implements name, or_more{
          * 
          * @override
          * public method(){body};
@@ -1118,6 +1118,14 @@ public class Untitled1 {
          *          void setVar(int var){
          *              this.var = var;
          *          }
+         * 
+         * -----------------------------------------------------------------------------
+         * 
+         * 
+         * 
+         * 
+         * 
+         * 
          * 
          * 
          * 
